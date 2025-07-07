@@ -34,6 +34,17 @@ import CompostOutlinedIcon from '@mui/icons-material/CompostOutlined';
 import NoDrinksOutlinedIcon from '@mui/icons-material/NoDrinksOutlined';
 import SpaOutlinedIcon from '@mui/icons-material/SpaOutlined';
 import BlurOffOutlinedIcon from '@mui/icons-material/BlurOffOutlined';
+import img from '../img/overla-banr-04.webp';
+import EnergySavingsLeafOutlinedIcon from '@mui/icons-material/EnergySavingsLeafOutlined';
+import BlurCircularOutlinedIcon from '@mui/icons-material/BlurCircularOutlined';
+import AcUnitOutlinedIcon from '@mui/icons-material/AcUnitOutlined';
+import MapsUgcOutlinedIcon from '@mui/icons-material/MapsUgcOutlined';
+import img1 from '../img/Grid-3-768x768.webp';
+import img2 from '../img/Grid-4.webp';
+import img3 from '../img/bath-salts-lavender-royalty-free-600nw-2539188765.webp';
+import img4 from '../img/Grid-2.webp';
+import img5 from '../img/Grid-1.webp';
+
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Shop', 'Blog', 'Gallery', 'Pages'];
@@ -168,7 +179,7 @@ const Header = (props) => {
               <h5>LONG LASTING </h5>
               <h1>Weightless & Waterproof</h1>
               <span>Doaesent in nunc vel urna consequat mattis eget vel libero. Phasellus pellentesque Proin tempus tempor diam, non pellentesque quam ornare vel. Aenean laoree</span><br></br>
-              <button className='btn'><a href="">Shop Now</a></button>
+              <button className='btn'>SHOP NOW</button>
             </div>
           </div>
           <div>
@@ -186,7 +197,7 @@ const Header = (props) => {
               <h5>COSMETICS </h5>
               <h1>Dermatologist Tested</h1>
               <span>Aenean laoree praesent in nunc vel urna consequat mattis eget vel libero. Phasellus pellentesque Proin tempus tempor diam, non pellentesque quam ornare vel. </span><br></br>
-              <button className='btn'><a href="">Shop Now</a></button>
+              <button className='btn'>SHOP NOW</button>
             </div>
           </div>
           <div>
@@ -204,7 +215,7 @@ const Header = (props) => {
               <h5>PARABEN-FREE </h5>
               <h1>Triple Power Products</h1>
               <span>Praesent in nunc vel urna consequat mattis eget vel libero. Phasellus pellentesque Proin tempus tempor diam, non pellentesque quam ornare vel. Aenean laoree</span><br></br>
-              <button className='btn'><a href="">Shop Now</a></button>
+              <button className='btn'>SHOP NOW</button>
             </div>
           </div>
         </Slider>
@@ -263,64 +274,64 @@ const Header = (props) => {
             <Grid size={3}>
               <div className='content-item'>
                 <div className='content-icon'>
-                     <CompostOutlinedIcon sx={{ fontSize: 70 }}></CompostOutlinedIcon>
+                  <CompostOutlinedIcon sx={{ fontSize: 70 }}></CompostOutlinedIcon>
                 </div>
                 <div className='content-title'>
-                      <h5><a href="#" target='_blank' rel='nofollow'>Natural Ingredients</a></h5>
+                  <h5><a href="#" target='_blank' rel='nofollow'>Natural Ingredients</a></h5>
                 </div>
                 <div className='content-description'>
                   <p>Praesent in nunc vel urna consequat mattis eget vel libero. Phasellus entesque</p>
                 </div>
                 <div className='content-btn'>
-                  <button><a href="">READ MORE</a></button>
+                  <a href="">READ MORE</a>
                 </div>
               </div>
             </Grid>
             <Grid size={3}>
               <div className='content-item'>
                 <div className='content-icon'>
-                     <BlurOffOutlinedIcon sx={{ fontSize: 70 }}></BlurOffOutlinedIcon>
+                  <BlurOffOutlinedIcon sx={{ fontSize: 70 }}></BlurOffOutlinedIcon>
                 </div>
                 <div className='content-title'>
-                      <h5><a href="#" target='_blank' rel='nofollow'>Fragrance Free</a></h5>
+                  <h5><a href="#" target='_blank' rel='nofollow'>Fragrance Free</a></h5>
                 </div>
                 <div className='content-description'>
                   <p>Ahasellus entesque praesent in nunc vel urna consequat mattis eget vel libero. </p>
                 </div>
                 <div className='content-btn'>
-                  <button><a href="">READ MORE</a></button>
-                </div>
-              </div>
-            </Grid>
-            <Grid size={3}>
-             <div className='content-item'>
-                <div className='content-icon'>
-                     <SpaOutlinedIcon sx={{ fontSize: 70 }}></SpaOutlinedIcon>
-                </div>
-                <div className='content-title'>
-                      <h5><a href="#" target='_blank' rel='nofollow'>Allergy Tested</a></h5>
-                </div>
-                <div className='content-description'>
-                  <p>Nunc vel urna consequat praesent in mattis eget vel libero zhasellus entesque.</p>
-                </div>
-                <div className='content-btn'>
-                  <button><a href="">READ MORE</a></button>
+                  <a href="">READ MORE</a>
                 </div>
               </div>
             </Grid>
             <Grid size={3}>
               <div className='content-item'>
                 <div className='content-icon'>
-                     <NoDrinksOutlinedIcon sx={{ fontSize: 70 }}></NoDrinksOutlinedIcon>
+                  <SpaOutlinedIcon sx={{ fontSize: 70 }}></SpaOutlinedIcon>
                 </div>
                 <div className='content-title'>
-                      <h5><a href="#" target='_blank' rel='nofollow'>Paraben Free</a></h5>
+                  <h5><a href="#" target='_blank' rel='nofollow'>Allergy Tested</a></h5>
                 </div>
                 <div className='content-description'>
-                  <p>Mattis eget vel libero praesent in nunc vel urna consequat ehasellus entesque</p>
+                  <p>Nunc vel urna consequat praesent in mattis eget vel libero zhasellus entesque.</p>
                 </div>
                 <div className='content-btn'>
-                  <button><a href="">READ MORE</a></button>
+                  <a href="">READ MORE</a>
+                </div>
+              </div>
+            </Grid>
+            <Grid size={3}>
+              <div className='content-item'>
+                <div className='content-icon'>
+                  <NoDrinksOutlinedIcon sx={{ fontSize: 70 }}></NoDrinksOutlinedIcon>
+                </div>
+                <div className='content-title'>
+                  <h5><a href="#" target='_blank' rel='nofollow'>Paraben Free</a></h5>
+                </div>
+                <div className='content-description'>
+                  <p>Mattis eget vel libero praesent in nunc vel urna consequat ehasellus entesque libero zhasellus.</p>
+                </div>
+                <div className='content-btn'>
+                  <a href="">READ MORE</a>
                 </div>
               </div>
             </Grid>
@@ -331,7 +342,99 @@ const Header = (props) => {
 
       {/* {/*information section end */}
 
+      {/* elementor section start */}
+      <Box className='elementor'>
+        <Grid container spacing={2}>
+          <Grid size={6}>
+            <img src={img} alt="" width={'85%'} />
+          </Grid>
+          <Grid size={6}>
+            <div className='elementor-container'>
+              <div className='elementor-subtitle'>
+                <span>PURE AND SIMPLE</span>
+              </div>
+              <div className='elementor-title'>
+                <h1>Deeply Nourishing Hair Serum For Glowing & Healthy Hair</h1>
+              </div>
+              <div className='elementor-wrapper'>Ut tempor sem leo, a ultricies quam aliquam eget. Vivamus commodo scelerisq ue velit, quis viverra velit bibendum vel. Phasell sus id leo et vestibulum.</div>
+            </div>
 
+            <div className='elementor-section'>
+              <div className='container-bottom'>
+                <Grid container spacing={2}>
+                  <Grid size={6}>
+                    <div className='elementor-wrap'>
+                      <div className='elementor-box'>
+                        <div className='elementor-icon'><EnergySavingsLeafOutlinedIcon sx={{ fontSize: 40 }}></EnergySavingsLeafOutlinedIcon></div>
+                        <h4>Strong & Smooth</h4>
+
+                      </div>
+                      <div className='elementor-box'>
+                        <div className='elementor-icon'><NoDrinksOutlinedIcon sx={{ fontSize: 40 }}></NoDrinksOutlinedIcon></div>
+                        <h4>Paraben-Free</h4>
+
+                      </div>
+                    </div>
+                  </Grid>
+                  <Grid size={6}>
+                    <div className='elementor-wrap'>
+                      <div className='elementor-box'>
+                        <div className='elementor-icon'><BlurCircularOutlinedIcon sx={{ fontSize: 40 }}></BlurCircularOutlinedIcon></div>
+                        <h4>Sulfate-Free </h4>
+
+                      </div>
+                      <div className='elementor-box'>
+                        <div className='elementor-icon'><AcUnitOutlinedIcon sx={{ fontSize: 40 }}></AcUnitOutlinedIcon></div>
+                        <h4>100% Vegan </h4>
+
+                      </div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+            </div>
+
+            <div className='elementor-bottom'>
+              <div className='elementor-btn'><button >SHOP LILAC</button></div>
+              <div className='elementor-info'>
+                <MapsUgcOutlinedIcon sx={{ fontSize: 40 }}></MapsUgcOutlinedIcon>
+                <div>
+                  <h5>Chat Us Anytime</h5>
+                  <p>+00 123 456 789</p>
+
+                </div>
+              </div>
+            </div>
+          </Grid>
+
+        </Grid>
+      </Box>
+
+
+      {/* elementor section end */}
+
+      {/* product section start */}
+      <Box>
+        <div className='product-top'>
+          <h5>TOP PICKS</h5>
+          <h2>New & Trending Products</h2>
+        </div>
+        <div class="image-list-wrap">
+          <img src={img1} alt="img1" sx={'width: 20%'} />
+          <img src={img2} alt="img2" sx={'width: 30%'} />
+          <img src={img3} alt="img3" sx={'width: 50%'} />
+          <img src={img4} alt="img4" sx={'width: 50%'} />
+          <img src={img5} alt="img4" sx={'width: 50%'} />
+        </div>
+
+
+
+
+      </Box>
+
+
+
+      {/* product section end */}
 
     </>
   )

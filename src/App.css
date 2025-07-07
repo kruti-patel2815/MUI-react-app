@@ -39,18 +39,37 @@
 }
 
 .btn {
-  padding: 10px 20px;
-  color: black !important;
-  border: 2px solid #555555;
+  position: relative;
+  padding: 15px 25px;
+  color: black;
   background-color: #ECDEC1;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 1;
+
 }
 
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: black;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
 
 .btn:hover {
-  background-color: #555555;
   color: white;
 }
-
 .text1 {
   position: absolute;
   top: 50%;
@@ -63,37 +82,189 @@
 
 .shipping {
   background-color: #ECDEC1;
-  height: 200px;
+
   width: 100%;
   margin-top: -7px;
 }
-.icons{
+
+.icons {
   display: flex;
   padding: 20px;
   justify-content: center;
   padding: 50px 0px;
 }
-.i1{
+
+.i1 {
   padding: 10px;
 }
-.h3{
+
+.h3 {
   font-size: 20px !important;
   font-family: sans-serif;
- 
+
 }
-.h5{
+
+.h5 {
   font-size: 12px !important;
   font-family: sans-serif;
-  
+
 }
-.t1{
-  padding: 10px ;
+
+.t1 {
+  padding: 10px;
 }
-.info{
+
+.info {
   width: 100%;
-  height: 400px;
-  padding:70px 30px 70px 30px;
+
+  padding: 70px 30px 70px 30px;
 }
-.content-item{
+
+.content-item {
   text-align: center;
+}
+
+.content-title a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 20px;
+  padding: 15px 0px;
+}
+
+.content-title a:hover {
+  color: rgb(248, 155, 68);
+}
+
+.content-btn a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  background: none;
+  transition: color 0.3s ease;
+}
+
+.content-btn a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(248, 155, 68);
+  /* underline color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-btn a:hover {
+  color: rgb(248, 155, 68);
+}
+
+.content-btn a:hover::after {
+  transform: scaleX(1);
+}
+
+.elementor {
+  background-image: url('./img/mask-patten-style.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  width: 100%;
+  background-color: #fff8e9;
+  padding: 50px 30px;
+}
+
+.elementor-container {
+  padding: 20px 10px;
+}
+
+.elementor-title {
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-size: 18px;
+
+}
+
+.elementor-box {
+  display: flex;
+  padding: 10px 0px;
+}
+
+.elementor-box h4 {
+  font-size: 18px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.elementor-btn button {
+  position: relative;
+  padding: 15px 25px;
+  color: black;
+  background-color: #ECDEC1;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 1;
+}
+
+.elementor-btn button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: black;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.elementor-btn button:hover::before {
+  width: 100%;
+}
+
+.elementor-btn button:hover {
+  color: white;
+}
+.elementor-bottom{
+  display: flex;
+}
+.elementor-info{
+  padding-left: 20px;
+  display: flex;
+}
+.product-top {
+   
+    text-align: center;
+    padding-top:100px ;
+    padding-bottom: 30px;
+}
+.product-top h5{
+  font-size: 16px;
+}
+.product-top h2{
+  font-size: 41px;
+}
+.image-list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.image-list-wrap img {
+  height: auto;
+  border-radius: 6px;
+}
+.image-list-wrap{
+  display: flex;
 }
