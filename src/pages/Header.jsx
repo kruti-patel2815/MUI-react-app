@@ -44,7 +44,12 @@ import img2 from '../img/Grid-4.webp';
 import img3 from '../img/bath-salts-lavender-royalty-free-600nw-2539188765.webp';
 import img4 from '../img/Grid-2.webp';
 import img5 from '../img/Grid-1.webp';
-
+import p1 from '../img/shop-16.jpg';
+import p2 from '../img/shop-18.jpg';
+import p3 from '../img/shop-2.jpg';
+import p4 from '../img/shop-3.jpg';
+import Rating from '@mui/material/Rating';
+import StarIcon from '@mui/icons-material/Star';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Shop', 'Blog', 'Gallery', 'Pages'];
@@ -88,8 +93,29 @@ const Header = (props) => {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
+  const imgStyle = (widthPercent) => ({
+    width: { xs: '100%', md: `${widthPercent}%` },
+    height: 250,
+    objectFit: 'cover',
+    borderRadius: 2,
+    transition: 'transform 0.4s ease',
+    '&:hover': {
+      transform: 'scale(1.05)',
+    },
+  });
 
+  const slick = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 4000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    arrows: false
 
+  };
 
   return (
     <>
@@ -415,27 +441,158 @@ const Header = (props) => {
 
       {/* product section start */}
       <Box>
-        <div className='product-top'>
+        <div className='product-top '>
           <h5>TOP PICKS</h5>
           <h2>New & Trending Products</h2>
         </div>
-        <div class="image-list-wrap">
-          <img src={img1} alt="img1" sx={'width: 20%'} />
-          <img src={img2} alt="img2" sx={'width: 30%'} />
-          <img src={img3} alt="img3" sx={'width: 50%'} />
-          <img src={img4} alt="img4" sx={'width: 50%'} />
-          <img src={img5} alt="img4" sx={'width: 50%'} />
-        </div>
+      </Box>
 
+      {/* Image Grid */}
+      <Box sx={{ px: '20px', pb: '20px' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            width: '100%',
+            gap: 2,
+          }}
+        >
+          {/* Left 60% area (contains 3-4 images) */}
+          <Box
+            sx={{
+              width: { xs: '100%', md: '60%' },
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: 2,
+            }}
+          >
+            {/* First row inside left block */}
+            <Box
+              component="img"
+              src={img1}
+              alt="img1"
+              sx={imgStyle(40)}
+            />
+            <Box
+              component="img"
+              src={img2}
+              alt="img2"
+              sx={imgStyle(55)}
+            />
 
+            {/* Second row inside left block */}
+            <Box
+              component="img"
+              src={img4}
+              alt="img4"
+              sx={imgStyle(50)}
+            />
+            <Box
+              component="img"
+              src={img3}
+              alt="img3"
+              sx={imgStyle(45)}
+            />
 
+          </Box>
 
+          {/* Right 40% area (usually 1 tall image) */}
+          <Box
+            component="img"
+            src={img5}
+            alt="img5"
+            sx={{
+              width: { xs: '100%', md: '38%' }, // slightly less than 40% to accommodate gap
+              height: { xs: 300, md: 520 },
+              objectFit: 'cover',
+              borderRadius: 2,
+              transition: 'transform 0.4s ease',
+              '&:hover': {
+                transform: 'scale(1.05)',
+              },
+            }}
+          />
+        </Box>
       </Box>
 
 
 
       {/* product section end */}
 
+
+      {/* offer slick start */}
+
+      <div className="slider-container">
+        <Slider {...slick}>
+          <div>
+            <h3>40% Off On Booking</h3>
+          </div>
+          <div>
+            <h3>40% Off On Booking</h3>
+          </div>
+          <div>
+            <h3>40% Off On Booking</h3>
+          </div>
+          <div>
+            <h3>40% Off On Booking</h3>
+          </div>
+          <div>
+            <h3>40% Off On Booking</h3>
+          </div>
+          <div>
+            <h3>40% Off On Booking</h3>
+          </div>
+
+        </Slider>
+      </div>
+
+      {/* offer slick end */}
+
+      {/* sale section start */}
+      <Box className='product-top'>
+        <h5>HOT SALE</h5>
+        <h2>Imported Products</h2>
+      </Box>
+      <Grid container spacing={2} justifyContent={'space-between'}>
+        {[p1, p2, p3, p4].map((img, i) => (
+          <Grid item xs={12} sm={6} md={3} key={i}>
+            <div className="product-card">
+              <div className="product-img">
+                <img src={img} alt="" className="main-img" />
+                <img src={img} alt="" className="hover-img" />
+              </div>
+              <div className="product-detail">
+                <div className="product-title">
+                  <h5>
+                    <a href="#">{
+                      ["Detangling Hair Spray", "Anti-Aging Face Cream", "Moisturizing Curl Activator Cream", "Face Moisturizer & Face Wash"][i]
+                    }</a>
+                  </h5>
+                </div>
+                <div className="product-rating">
+                  <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'yellow' }}>
+                    <Rating
+                      name="text-feedback"
+                      readOnly
+                      precision={0.5}
+                      emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                    />
+                  </Box>
+                </div>
+                <div className="product-price">
+                  <span>{
+                    ["$5.00 - $10.00", "$5.00 - $10.00", "$11.00", "$11.05"][i]
+                  }</span>
+                </div>
+              </div>
+            </div>
+          </Grid>
+        ))}
+      </Grid>
+
+
+
+      {/* sale section end */}
     </>
   )
 }
