@@ -68,6 +68,7 @@
 .btn:hover {
   color: white;
 }
+
 .text1 {
   position: absolute;
   top: 50%;
@@ -167,6 +168,7 @@
 .content-btn a:hover::after {
   transform: scaleX(1);
 }
+
 .product-card {
   text-align: center;
   padding: 10px;
@@ -213,7 +215,8 @@
 }
 
 .product-detail {
-  margin-top: 200px; /* Adjust this as needed based on image height */
+  margin-top: 200px;
+  /* Adjust this as needed based on image height */
 }
 
 .product-title h5 a {
@@ -243,7 +246,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
   width: 100%;
   background-color: #fff8e9;
   padding: 50px 30px;
@@ -302,25 +304,31 @@
 .elementor-btn button:hover {
   color: white;
 }
-.elementor-bottom{
+
+.elementor-bottom {
   display: flex;
 }
-.elementor-info{
+
+.elementor-info {
   padding-left: 20px;
   display: flex;
 }
+
 .product-top {
-   
-    text-align: center;
-    padding-top:100px ;
-    padding-bottom: 30px;
+
+  text-align: center;
+
+  padding: 80px 20px 30px 0px;
 }
-.product-top h5{
+
+.product-top h5 {
   font-size: 16px;
 }
-.product-top h2{
+
+.product-top h2 {
   font-size: 41px;
 }
+
 .image-list-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -333,7 +341,8 @@
   height: auto;
   border-radius: 6px;
 }
-.image-list-wrap{
+
+.image-list-wrap {
   display: flex;
 }
 
@@ -342,49 +351,13 @@
   padding: 10px;
   overflow: hidden;
   position: relative;
+
 }
 
-.product-img {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1/1; /* Ensures square image */
-  overflow: hidden;
-}
-
-.product-img img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.product-img .main-img {
-  z-index: 1;
-  opacity: 1;
-  transform: translateX(0%);
-}
-
-.product-img .hover-img {
-  z-index: 2;
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.product-img:hover .main-img {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
-.product-img:hover .hover-img {
-  opacity: 1;
-  transform: translateX(0%);
-}
 
 .product-detail {
   margin-top: 20px;
+
 }
 
 .product-title h5 a {
@@ -395,15 +368,132 @@
 }
 
 .product-title h5 a:hover {
-  color:  rgb(248, 155, 68);
+  color: rgb(248, 155, 68);
 }
 
 .product-rating svg {
-  color:rgb(255, 238, 3)!important;
+  color: rgb(255, 238, 3) !important;
 }
 
 .product-price span {
   display: block;
   margin-top: 5px;
   font-weight: bold;
+}
+
+.product-whole {
+  padding: 80px 30px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px;
+  /* balances padding within cards */
+}
+
+.product-card {
+  flex: 1 1 calc(25% - 16px);
+  margin: 8px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease;
+}
+
+.product-img .hover-img {
+  opacity: 0;
+}
+
+.product-img:hover .hover-img {
+  opacity: 1;
+}
+
+.product-img:hover .main-img {
+  opacity: 0;
+}
+
+.product-detail {
+  padding: 15px;
+  text-align: center;
+}
+
+.ad {
+  padding: 80px 30px;
+  background-image: url('./img/mask-patten-style.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-color: #fff8e9;
+  padding: 50px 30px;
+}
+
+.ad-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.ad-left {
+  width: 50%;
+  padding: 10px;
+}
+
+.ad-right {
+  width: 50%;
+  /* Empty right section - you can add content later */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ 
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.ad-right{
+  padding-left: 20px;
+  padding-top: 50px;
+}
+.content-title{
+  font-size: 24px;
+}
+.content-price{
+  font-size: 20px;
+  padding:10px 0px;
+}
+.content-rating{
+  padding: 10px 0px;
+}
+.content-detail{
+  padding: 15px 0px;
+}
+.content-btn2{
+  padding:10px 0px;
+
 }

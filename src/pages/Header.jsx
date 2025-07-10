@@ -45,11 +45,20 @@ import img3 from '../img/bath-salts-lavender-royalty-free-600nw-2539188765.webp'
 import img4 from '../img/Grid-2.webp';
 import img5 from '../img/Grid-1.webp';
 import p1 from '../img/shop-16.jpg';
+import p11 from '../img/shop-16.1.jpg';
 import p2 from '../img/shop-18.jpg';
+import p22 from '../img/shop-18.1.jpg';
 import p3 from '../img/shop-2.jpg';
+import p33 from '../img/shop-2.1.jpg';
 import p4 from '../img/shop-3.jpg';
+import p44 from '../img/shop-3.1.jpg';
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
+import ad1 from '../img/shop-2.jpg';
+import ad2 from '../img/shop-2.1.jpg';
+import ad3 from '../img/shop-19.webp';
+import ad4 from '../img/shop-16.jpg';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Shop', 'Blog', 'Gallery', 'Pages'];
@@ -116,6 +125,13 @@ const Header = (props) => {
     arrows: false
 
   };
+
+  const products = [
+    { main: p1, hover: p11, name: "Detangling Hair Spray", price: "$5.00 - $10.00" },
+    { main: p2, hover: p22, name: "Anti‑Aging Face Cream", price: "$5.00 - $10.00" },
+    { main: p3, hover: p33, name: "Moisturizing Curl Activator Cream", price: "$11.00" },
+    { main: p4, hover: p44, name: "Face Moisturizer & Face Wash", price: "$11.05" },
+  ];
 
   return (
     <>
@@ -441,10 +457,10 @@ const Header = (props) => {
 
       {/* product section start */}
       <Box>
-        <div className='product-top '>
+        <Box className='product-top '>
           <h5>TOP PICKS</h5>
           <h2>New & Trending Products</h2>
-        </div>
+        </Box>
       </Box>
 
       {/* Image Grid */}
@@ -549,50 +565,94 @@ const Header = (props) => {
       {/* offer slick end */}
 
       {/* sale section start */}
-      <Box className='product-top'>
-        <h5>HOT SALE</h5>
-        <h2>Imported Products</h2>
+      <Box className='product-whole'>
+        <Box className='product-top'>
+          <h5>HOT SALE</h5>
+          <h2>Imported Products</h2>
+        </Box>
+        <Box className="gallery-container">
+          {products.map((p, idx) => (
+            <Box className="product-card" key={idx}>
+              <Box className="product-img">
+                <img src={p.main} alt="" className="main-img" />
+                <img src={p.hover} alt="" className="hover-img" />
+              </Box>
+              <Box className="product-detail">
+                <h5><a href="#">{p.name}</a></h5>
+                <Box style={{ display: 'flex', justifyContent: 'center', color: 'yellow' }}>
+                  <Rating readOnly precision={0.5} emptyIcon={<StarIcon style={{ color: 'gold', opacity: 0.55 }} />} />
+                </Box>
+                <Box className="product-price">{p.price}</Box>
+              </Box>
+            </Box>
+          ))}
+        </Box>
+
       </Box>
-      <Grid container spacing={2} justifyContent={'space-between'}>
-        {[p1, p2, p3, p4].map((img, i) => (
-          <Grid item xs={12} sm={6} md={3} key={i}>
-            <div className="product-card">
-              <div className="product-img">
-                <img src={img} alt="" className="main-img" />
-                <img src={img} alt="" className="hover-img" />
-              </div>
-              <div className="product-detail">
-                <div className="product-title">
-                  <h5>
-                    <a href="#">{
-                      ["Detangling Hair Spray", "Anti-Aging Face Cream", "Moisturizing Curl Activator Cream", "Face Moisturizer & Face Wash"][i]
-                    }</a>
-                  </h5>
-                </div>
-                <div className="product-rating">
-                  <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'yellow' }}>
-                    <Rating
-                      name="text-feedback"
-                      readOnly
-                      precision={0.5}
-                      emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-                    />
-                  </Box>
-                </div>
-                <div className="product-price">
-                  <span>{
-                    ["$5.00 - $10.00", "$5.00 - $10.00", "$11.00", "$11.05"][i]
-                  }</span>
-                </div>
-              </div>
-            </div>
-          </Grid>
-        ))}
-      </Grid>
 
 
 
       {/* sale section end */}
+
+      {/* advertisement section start */}
+      <Box className='ad'>
+        <Box className="ad-wrapper">
+          <Box className="ad-left">
+            <Box className="image-grid">
+              <img src={ad1} alt="ad1" />
+              <img src={ad2} alt="ad2" />
+              <img src={ad3} alt="ad3" />
+              <img src={ad4} alt="ad4" />
+            </Box>
+          </Box>
+          <Box className="ad-right">
+            <Box className='content'>
+              <Box className='content-title'>
+                <h2>Under-Eye Bags Removal Cream</h2>
+              </Box>
+              <Box className='content-price'>
+                <span>$6.00</span>
+              </Box>
+              <Box className='content-rating'>
+                <Box sx={{ width: 200, display: 'flex', alignItems: 'center' }}>
+                  <Rating
+                    name="text-feedback"
+
+                    readOnly
+                    precision={0.5}
+                    emptyIcon={<StarIcon style={{ color: 'gold', opacity: 0.55 }} fontSize="inherit" />}
+                  />
+                  <Box sx={{ ml: 2 }}></Box>
+                </Box>
+              </Box>
+              <Box className='content-detail'>
+                <p>Suspendisse potenti nullam ac tortor vitae. Amet risus nullam eget felis. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Nunc mi ipsum faucibus vitae aliquet nec eget sit sit amet.</p>
+              </Box>
+              <Box className='content-btn'>
+                <button className='btn'>ADD TO CART</button>
+              </Box>
+              <Box className='content-btn2' sx={{ display: 'flex', gap: 2 }}>
+                <button className='btn'>ADD TO WISHLIST</button>
+                <button className='btn'>BUY NOW</button>
+              </Box>
+
+            </Box>
+            <Box className='content-bottom' sx={{ display: 'flex', gap: 2}}>
+              <Box className='tag'>
+                <span>Tag: <a href="">Dryness</a></span>
+              </Box>
+              <Box className='category'>
+                <span>Category: <a href="">Cream</a></span>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+
+
+
+      {/* advertisement section end */}
     </>
   )
 }
