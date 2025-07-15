@@ -497,3 +497,58 @@
   padding:10px 0px;
 
 }
+
+.category .btn1 a,
+.tag .btn1 a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  border: none;
+  background: none;
+  transition: color 0.3s ease;
+}
+
+.category .btn1 a::after,
+.tag .btn1 a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(248, 155, 68); 
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category .btn1 a:hover,
+.tag .btn1 a:hover {
+  color: rgb(248, 155, 68);
+}
+
+.category .btn1 a:hover::after,
+.tag .btn1 a:hover::after {
+  transform: scaleX(1);
+}
+.content-bottom{
+  margin-top: 20px;
+  padding: 10px 0px;
+}
+.content-box{
+  margin-top: 20px;
+  padding: 25px;
+  background-color: #ffffff;
+}
+.content-ad{
+  margin-top: 20px;
+  padding: 25px;
+  background-color: #ffffff;
+}
+.adicons{
+  background-color: #ffffff;
+  padding: 80px 0px;
+}
