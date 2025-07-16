@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 const Headertop = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,

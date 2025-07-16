@@ -318,7 +318,7 @@
 
   text-align: center;
 
-  padding: 80px 20px 30px 0px;
+  padding: 40px 20px 30px 0px;
 }
 
 .product-top h5 {
@@ -548,7 +548,76 @@
   padding: 25px;
   background-color: #ffffff;
 }
-.adicons{
+.ad-container{
   background-color: #ffffff;
   padding: 80px 0px;
+}
+.test{
+  padding: 80px 30px;
+  background-image: url('./img/mask-patten-style.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-color: #faf2e1;
+ 
+}
+.test-top{
+  text-align: center;
+}
+.subtitle{
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.title{
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.test-container{
+  background: transparent;
+
+}
+.test-content{
+  margin: 30px 0px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.test-id{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.test-img img{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+
+}
+.test-img {
+  display: flex;
+  justify-content: center;
+}
+.slide-container{
+  padding: 15px 0px;
+  background-color: #ECDEC1;
+}
+.shop{
+  padding:80px 0px;
+}
+.shop-top{
+  text-align: center;
+}
+.shop-bottom{
+  margin-top: 50px;
+}
+.footer{
+  padding: 80px 30px;
+  margin: 0px 100px;
+}
+.footer-left{
+  margin-bottom: 50px;
+}
+.head{
+  font-size: 25px;
+  
 }

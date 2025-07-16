@@ -70,7 +70,14 @@ import ad9 from "../img/brand-logo-4.webp";
 import ad10 from "../img/brand-logo-5.webp";
 import ad11 from "../img/brand-logo-6.webp";
 import ad12 from "../img/history-logo-1.webp";
-
+import test1 from "../img/testimonial-1.webp";
+import test2 from "../img/testimonial-2.webp";
+import test3 from "../img/testimonial-3.webp";
+import shop1 from "../img/insta-img-2.jpg";
+import shop2 from "../img/insta-img-3.jpg";
+import shop3 from "../img/insta-img-4.jpg";
+import shop4 from "../img/insta-img-5-300x300.jpg";
+import shop5 from "../img/insta-img-6-300x300.jpg";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Shop", "Blog", "Gallery", "Pages"];
@@ -146,7 +153,14 @@ const Header = (props) => {
     speed: 6000,
     autoplaySpeed: 2000,
     cssEase: "linear",
-     arrows: false,
+    arrows: false,
+  };
+  const test = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   const products = [
@@ -505,7 +519,7 @@ const Header = (props) => {
               </div>
             </div>
 
-            <div className="elementor-section">
+            <Box className="elementor-section">
               <div className="container-bottom">
                 <Grid container spacing={2}>
                   <Grid size={6}>
@@ -550,7 +564,7 @@ const Header = (props) => {
                   </Grid>
                 </Grid>
               </div>
-            </div>
+            </Box>
 
             <div className="elementor-bottom">
               <div className="elementor-btn">
@@ -580,7 +594,6 @@ const Header = (props) => {
         </Box>
       </Box>
 
-      {/* Image Grid */}
       <Box sx={{ px: "20px", pb: "20px" }}>
         <Box
           sx={{
@@ -590,7 +603,7 @@ const Header = (props) => {
             gap: 2,
           }}
         >
-          {/* Left 60% area (contains 3-4 images) */}
+       
           <Box
             sx={{
               width: { xs: "100%", md: "60%" },
@@ -599,22 +612,22 @@ const Header = (props) => {
               gap: 2,
             }}
           >
-            {/* First row inside left block */}
+        
             <Box component="img" src={img1} alt="img1" sx={imgStyle(40)} />
             <Box component="img" src={img2} alt="img2" sx={imgStyle(55)} />
 
-            {/* Second row inside left block */}
+           
             <Box component="img" src={img4} alt="img4" sx={imgStyle(50)} />
             <Box component="img" src={img3} alt="img3" sx={imgStyle(45)} />
           </Box>
 
-          {/* Right 40% area (usually 1 tall image) */}
+      
           <Box
             component="img"
             src={img5}
             alt="img5"
             sx={{
-              width: { xs: "100%", md: "38%" }, // slightly less than 40% to accommodate gap
+              width: { xs: "100%", md: "38%" }, 
               height: { xs: 300, md: 520 },
               objectFit: "cover",
               borderRadius: 2,
@@ -631,7 +644,7 @@ const Header = (props) => {
 
       {/* offer slick start */}
 
-      <div className="slider-container">
+      <div className="slide-container">
         <Slider {...slick}>
           <div>
             <h3>40% Off On Booking</h3>
@@ -842,11 +855,11 @@ const Header = (props) => {
       {/* advertisement section end */}
 
       {/* icon-ad section start */}
-      <Box className='adicons'>
-        <div className="slider-container">
+      <Box className="adicons">
+        <div className="ad-container">
           <Slider {...adicon}>
             <div>
-                <img src={ad6} alt="ad1" />
+              <img src={ad6} alt="ad1" />
             </div>
             <div>
               <img src={ad7} alt="ad1" />
@@ -855,22 +868,161 @@ const Header = (props) => {
               <img src={ad8} alt="ad1" />
             </div>
             <div>
-             <img src={ad9} alt="ad1" />
+              <img src={ad9} alt="ad1" />
             </div>
             <div>
               <img src={ad10} alt="ad1" />
             </div>
             <div>
-             <img src={ad11} alt="ad1" />
+              <img src={ad11} alt="ad1" />
             </div>
-             <div>
-             <img src={ad12} alt="ad1" />
+            <div>
+              <img src={ad12} alt="ad1" />
             </div>
           </Slider>
         </div>
       </Box>
 
       {/* icon-ad section end */}
+
+      {/* testimonial section start */}
+      <Box className="test">
+        <Box className="test-top">
+          <Box className="subtitle">
+            <span>TESTIMONIAL</span>
+          </Box>
+          <Box className="title">
+            <h2>What Our People Says</h2>
+          </Box>
+          <Box className="rate">
+            <Rating
+              name="text-feedback"
+              readOnly
+              precision={0.5}
+              emptyIcon={
+                <StarIcon
+                  style={{ color: "#B6713E", opacity: 0.55 }}
+                  fontSize="inherit"
+                />
+              }
+            />
+          </Box>
+        </Box>
+        <Box className="test-bottom">
+          <div className="test-container">
+            <Slider {...test}>
+              <div>
+                <p className="test-content">
+                  Nullam iaos mattis dolor rutrum nec libero vehicula, a
+                  suscipit feliicitudin. Aenean sed rutrum purus. Nunc nec magna
+                  laoreet, sodaleus bibens viverra vivamus edia.
+                </p>
+                <h5 className="test-id">
+                  ROSIA{" "}
+                  <span
+                    style={{
+                      color: "rgb(211, 173, 137)",
+                      marginLeft: "4px",
+                      marginRight: "4px",
+                    }}
+                  >
+                    - ACTRESS
+                  </span>
+                </h5>
+                <Box className="test-img">
+                  <img src={test1} alt="" />
+                </Box>
+              </div>
+              <div>
+                <p className="test-content">
+                  Aenean sed rutrum purus. Nunc nec magna laoreet, sodaleus
+                  bibens viverra. Nullam iaos mattis dolor rutrum nec libero
+                  vehicula, a suscipit feliicitudin vivamus odia.
+                </p>
+                <h5 className="test-id">
+                  JESICA{" "}
+                  <span
+                    style={{
+                      color: "rgb(211, 173, 137)",
+                      marginLeft: "4px",
+                      marginRight: "4px",
+                    }}
+                  >
+                    - DESIGNER
+                  </span>
+                </h5>
+                <Box className="test-img">
+                  <img src={test2} alt="" />
+                </Box>
+              </div>
+              <div>
+                <p className="test-content">
+                  Nunc nec magna laoreet, sodaleus bibens viverra. Aenean sed
+                  rutrum purus. Nullam iaos mattis dolor rutrum nec libero
+                  vehicula, a suscipit adia feliicitudin navamus.{" "}
+                </p>
+                <h5 className="test-id">
+                  HAANA
+                  <span
+                    style={{
+                      color: "rgb(211, 173, 137)",
+                      marginLeft: "4px",
+                      marginRight: "4px",
+                    }}
+                  >
+                    - SINGER
+                  </span>
+                </h5>
+                <Box className="test-img">
+                  <img src={test3} alt="" />
+                </Box>
+              </div>
+            </Slider>
+          </div>
+        </Box>
+      </Box>
+
+      {/* testimonial section end */}
+
+      {/* shop section start */}
+
+      <Box className="shop">
+        <Box className="shop-top">
+          <Box className="subtitle">
+            <span>INSTA SHOP</span>
+          </Box>
+          <Box className="title">
+            <h2>Tag Us on Instagram</h2>
+          </Box>
+          <Box className="para">
+            <p>
+              Praesent in nunc vel urna consequat mattis eget vel libero.
+              Phasellus <br></br>pellentesque Proin tempus tempor diam.
+            </p>
+          </Box>
+        </Box>
+        <Box className="shop-bottom">
+          <Grid container spacing={0}>
+            {[shop1, shop2, shop3, shop4, shop5].map((shop, index) => (
+              <Grid
+                item
+                key={index}
+                xs={6} 
+                sm={4} 
+                md={2.4} 
+                style={{ flexBasis: "20%", maxWidth: "20%" }}
+              >
+                <img
+                  src={shop}
+                  alt={`shop${index + 1}`}
+                  style={{ width: "100%" }}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </Box>
+      {/* shop section end */}
     </>
   );
 };
