@@ -28,7 +28,7 @@ const Headertop = () => {
                
             </Slider>
         </div>
-    )
-}
+    );
+};
 
 export default Headertop
