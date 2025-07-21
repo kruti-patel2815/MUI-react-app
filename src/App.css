@@ -7,16 +7,13 @@
 }
 
 .slider-container {
-  background-color: #ECDEC1;
+  background-color: #ecdec1;
   padding: 10px 0px;
 }
-
 
 .css-cyqh1t-MuiPaper-root-MuiDrawer-paper {
   left: 81% !important;
 }
-
-
 
 .slick-slider .slick-initialized button {
   display: none !important;
@@ -40,17 +37,16 @@
   position: relative;
   padding: 15px 25px;
   color: black;
-  background-color: #ECDEC1;
+  background-color: #ecdec1;
   border: none;
   cursor: pointer;
   overflow: hidden;
   transition: color 0.4s ease;
   z-index: 1;
-
 }
 
 .btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -80,7 +76,7 @@
 }
 
 .shipping {
-  background-color: #ECDEC1;
+  background-color: #ecdec1;
 
   width: 100%;
   margin-top: -7px;
@@ -100,13 +96,11 @@
 .h3 {
   font-size: 20px !important;
   font-family: sans-serif;
-
 }
 
 .h5 {
   font-size: 12px !important;
   font-family: sans-serif;
-
 }
 
 .t1 {
@@ -148,7 +142,7 @@
 }
 
 .content-btn a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -240,9 +234,8 @@
   font-weight: bold;
 }
 
-
 .elementor {
-  background-image: url('./img/mask-patten-style.png');
+  background-image: url("./img/mask-patten-style.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -259,7 +252,6 @@
   padding-bottom: 20px;
   padding-top: 10px;
   font-size: 18px;
-
 }
 
 .elementor-box {
@@ -277,7 +269,7 @@
   position: relative;
   padding: 15px 25px;
   color: black;
-  background-color: #ECDEC1;
+  background-color: #ecdec1;
   border: none;
   cursor: pointer;
   overflow: hidden;
@@ -286,7 +278,7 @@
 }
 
 .elementor-btn button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -315,7 +307,6 @@
 }
 
 .product-top {
-
   text-align: center;
 
   padding: 40px 20px 30px 0px;
@@ -351,13 +342,10 @@
   padding: 10px;
   overflow: hidden;
   position: relative;
-
 }
-
 
 .product-detail {
   margin-top: 20px;
-
 }
 
 .product-title h5 a {
@@ -439,7 +427,7 @@
 
 .ad {
   padding: 80px 30px;
-  background-image: url('./img/mask-patten-style.png');
+  background-image: url("./img/mask-patten-style.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -466,7 +454,7 @@
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
- 
+
   gap: 10px;
 }
 
@@ -476,26 +464,25 @@
   object-fit: cover;
   display: block;
 }
-.ad-right{
+.ad-right {
   padding-left: 20px;
   padding-top: 50px;
 }
-.content-title{
+.content-title {
   font-size: 24px;
 }
-.content-price{
+.content-price {
   font-size: 20px;
-  padding:10px 0px;
-}
-.content-rating{
   padding: 10px 0px;
 }
-.content-detail{
+.content-rating {
+  padding: 10px 0px;
+}
+.content-detail {
   padding: 15px 0px;
 }
-.content-btn2{
-  padding:10px 0px;
-
+.content-btn2 {
+  padding: 10px 0px;
 }
 
 .category .btn1 a,
@@ -513,13 +500,13 @@
 
 .category .btn1 a::after,
 .tag .btn1 a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 2px;
   width: 100%;
-  background-color: rgb(248, 155, 68); 
+  background-color: rgb(248, 155, 68);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
@@ -534,102 +521,170 @@
 .tag .btn1 a:hover::after {
   transform: scaleX(1);
 }
-.content-bottom{
+.content-bottom {
   margin-top: 20px;
   padding: 10px 0px;
 }
-.content-box{
+.content-box {
   margin-top: 20px;
   padding: 25px;
   background-color: #ffffff;
 }
-.content-ad{
+.content-ad {
   margin-top: 20px;
   padding: 25px;
   background-color: #ffffff;
 }
-.ad-container{
+.ad-container {
   background-color: #ffffff;
   padding: 80px 0px;
 }
-.test{
+.test {
   padding: 80px 30px;
-  background-image: url('./img/mask-patten-style.png');
+  background-image: url("./img/mask-patten-style.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   background-color: #faf2e1;
- 
 }
-.test-top{
+.test-top {
   text-align: center;
 }
-.subtitle{
+.subtitle {
   font-size: 16px;
   font-family: sans-serif;
 }
-.title{
+.title {
   font-size: 30px;
   font-family: sans-serif;
 }
-.test-container{
+.test-container {
   background: transparent;
-
 }
-.test-content{
+.test-content {
   margin: 30px 0px;
   text-align: center;
   font-size: 22px;
   font-weight: bold;
 }
-.test-id{
+.test-id {
   text-align: center;
   margin-bottom: 20px;
 }
-.test-img img{
+.test-img img {
   border-radius: 50%;
   width: 80px;
   height: 80px;
-
 }
 .test-img {
   display: flex;
   justify-content: center;
 }
-.slide-container{
+.slide-container {
   padding: 15px 0px;
-  background-color: #ECDEC1;
+  background-color: #ecdec1;
 }
-.shop{
-  padding:80px 0px;
+.shop {
+  padding: 80px 0px;
 }
-.shop-top{
+.shop-top {
   text-align: center;
 }
-.shop-bottom{
+.shop-bottom {
   margin-top: 50px;
 }
-.footer{
-  padding:30px;
+.footer {
+  padding: 30px;
   margin: 0px 100px;
 }
-.footer-left{
+.footer-left {
   margin-bottom: 50px;
 }
-.head{
+.head {
   font-size: 25px;
-  
 }
-.about1{
+.about1 {
   padding: 30px 0px;
 }
-.p{
+.p {
   padding: 18px 0px;
 }
-.footer-bottom{
+.footer-bottom {
   padding-bottom: 50px;
 }
-.payment-icon ,.mid ,.last{
+.payment-icon,
+.mid,
+.last {
   padding: 15px 0px;
+}
+
+.header-about {
+  position: relative;
+  height: 280px; 
+  background-image: url('./img/about-breadcrumb-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.header-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.548);
+  z-index: 1;
+}
+
+.main-about{
+  padding: 80px 30px;
+}
+.main-right img{
+  width: 100%;
+}
+.main-left {
+    padding: 40px 0px;
+}
+.main-left h2{
+  padding: 20px 0px;
+  font-size: 36px;
+}
+.main-left p{
+  padding-bottom: 30px;
+}
+.intense img{
+  width: 100%;
+}
+.intense{
+   padding: 80px 30px;
+  background-image: url("./img/mask-patten-style.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-color: #faf2e1;
+}
+.intense-right{
+  padding: 20px 10px;
+  
+}
+.intense-right h5{
+  padding: 20px 0px;
+}
+.intense-right h2{
+  font-size:36px; 
+}
+.intense-right p{
+  padding: 20px 0px;
+}
+.team{
+  text-align: center;
+  padding: 80px 30px;
+}
+.team-img img{
+  width: 100%;
 }
