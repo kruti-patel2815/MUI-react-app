@@ -53,7 +53,7 @@ const Footer = () => {
                           color: "black",
                           textDecoration: "none",
                           "&:hover": {
-                            color: "orange",
+                            color: "rgba(235, 170, 109, 1)",
                           },
                         }}
                       >
@@ -82,7 +82,7 @@ const Footer = () => {
                         color: "black",
                         textDecoration: "none",
                         "&:hover": {
-                          color: "orange",
+                          color: "rgba(235, 170, 109, 1)",
                         },
                       }}
                     >
@@ -110,7 +110,7 @@ const Footer = () => {
                         color: "black",
                         textDecoration: "none",
                         "&:hover": {
-                          color: "orange",
+                          color: "rgba(235, 170, 109, 1)",
                         },
                       }}
                     >
@@ -139,7 +139,7 @@ const Footer = () => {
                     color: "black",
                     textDecoration: "none",
                     "&:hover": {
-                      color: "orange",
+                      color: "rgba(235, 170, 109, 1)",
                     },
                   }}
                 >
@@ -155,7 +155,7 @@ const Footer = () => {
                     color: "black",
                     textDecoration: "none",
                     "&:hover": {
-                      color: "orange",
+                      color: "rgba(235, 170, 109, 1)",
                     },
                   }}
                 >
@@ -167,7 +167,7 @@ const Footer = () => {
                     color: "black",
                     textDecoration: "none",
                     "&:hover": {
-                      color: "orange",
+                      color: "rgba(235, 170, 109, 1)",
                     },
                   }}
                 >

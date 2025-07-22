@@ -300,7 +300,7 @@ const About = (props) => {
                 sx={{
                   color: "black",
                   ":hover": { color: "rgba(243, 180, 121, 1)" },
-                   fontWeight:'bold'
+                  fontWeight: "bold",
                 }}
                 href="#"
                 underline="none"
@@ -316,7 +316,7 @@ const About = (props) => {
                 sx={{
                   color: "black",
                   ":hover": { color: "rgba(243, 180, 121, 1)" },
-                   fontWeight:'bold'
+                  fontWeight: "bold",
                 }}
                 href="#"
                 underline="none"
@@ -332,7 +332,7 @@ const About = (props) => {
                 sx={{
                   color: "black",
                   ":hover": { color: "rgba(243, 180, 121, 1)" },
-                  fontWeight:'bold'
+                  fontWeight: "bold",
                 }}
                 href="#"
                 underline="none"
@@ -347,8 +347,83 @@ const About = (props) => {
       </Box>
 
       {/* team section end */}
+
+      {/* essential section start */}
+      <Box className="essential">
+        <Grid container spacing={2}>
+          
+            <Grid size={6}>
+              <h1 className="top">Luxurious & Premium Essential Daily Use Cosmetic Product</h1>
+            </Grid>
+         
+          <Grid size={6}>
+            <p>
+              Duis ultricies lacus sed turpis tincidunt id aliquet risus
+              feugiat. Gravida dictum fusce ut placerat orci. Et leo duis ut
+              diam quam nulla porttitor massa. Ipsum nunc aliquet bibendum enim.
+              Arcu bibendum at varius vel pharetra.
+            </p>
+
+            <Box
+              sx={{
+                color: "rgba(235, 170, 109, 1)",
+
+                textAlign: "center",
+                mt: 3,
+              }}
+            >
+              <Grid container spacing={8}>
+                <Grid item xs={4}>
+                  <Typography variant="h2">12k</Typography>
+                  <Link
+                    sx={{
+                      color: "black",
+                      ":hover": { color: "rgba(243, 180, 121, 1)" },
+                      fontWeight: "bold",
+                    }}
+                    href="#"
+                    underline="none"
+                  >
+                    {"Beauty Product"}
+                  </Link>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography variant="h2">5k</Typography>
+                  <Link
+                    sx={{
+                      color: "black",
+                      ":hover": { color: "rgba(243, 180, 121, 1)" },
+                      fontWeight: "bold",
+                    }}
+                    href="#"
+                    underline="none"
+                  >
+                    {"Employees"}
+                  </Link>
+                </Grid>
+                <Grid item xs={4}>
+                  <Typography variant="h2">20k</Typography>
+                  <Link
+                    sx={{
+                      color: "black",
+                      ":hover": { color: "rgba(243, 180, 121, 1)" },
+                      fontWeight: "bold",
+                    }}
+                    href="#"
+                    underline="none"
+                  >
+                    {"Happy Users"}
+                  </Link>
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      {/* essential section end */}
+
       {/* footer section start */}
-                <Footer></Footer>
+      <Footer></Footer>
       {/* footer section end */}
     </div>
   );

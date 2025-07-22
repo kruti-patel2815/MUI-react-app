@@ -3,7 +3,9 @@ import React from 'react';
 // import Headerbottom from './pages/Headerbottom';
 // import Header from './pages/Header';
 // import Footer from './pages/Footer';
-import About from './pages/About';
+// import About from './pages/About';
+import Blog from "./pages/Blog";
+// import Hb from './pages/Hb';
 import './App.css';
 
 function App() {
@@ -14,8 +16,9 @@ function App() {
       <Headerbottom></Headerbottom>
       <Header></Header>
       <Footer></Footer> */}
-      <About></About>
-   
+      {/* <About></About> */}
+       <Blog></Blog> 
+   {/* <Hb></Hb> */}
   </>
 
 
