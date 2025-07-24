@@ -27,7 +27,9 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import blog2 from "../img/shop-19.1-768x998.webp";
 import blog3 from "../img/shop-18.1.jpg";
 import blog4 from "../img/shop-8.1-768x998.webp";
-
+import Grid from "@mui/material/Grid";
+import CircleIcon from "@mui/icons-material/Circle";
+import Footer from './Footer';
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Shop", "Blog", "Gallery", "Pages"];
@@ -289,8 +291,69 @@ const Blog = (props) => {
             </Grid>
           </Grid>
         </Box>
+        <Box className="blog-bottom">
+          <p className="blog-content">
+            Vestibulum imperdiet eleifend enim nec varius. Vivamus ac facilisis
+            mauris. Etiam a varius purus. Morbi id augue dictum, malesuada ante
+            eu, iaculis augue. Nullam aliquam mi vitae lacus dictum ultricies.
+            Pellentesque vel purus id est vestibulum mattis. Etiam tincidunt
+            finibus ornare. Nulla viverra libero ut ex accumsan feugiat.
+            Praesent a u velit. Sed ac arcu eget massa varius posuere. Etiam ex
+            dolor, condimentum nec ante non, gravida volutpat ante. In et semper
+            diam. Curabitur ac aliquam leo.
+          </p>
+          <CircleIcon
+            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
+          ></CircleIcon>
+          Quisque faucibus nisi at luctus tempor. Sed at diam non quam males
+          <br></br>
+          <CircleIcon
+            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
+          ></CircleIcon>
+          porta orci tristique, vel hendrerit ante pulvinar. Duis eget tempor
+          tellus.
+          <br></br>
+          <CircleIcon
+            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
+          ></CircleIcon>
+          vestibulum elit at, vulputate ligula. Ut dapibus urna in tristique
+          eleifend
+          <br></br>
+          <CircleIcon
+            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
+          ></CircleIcon>
+          quam malesuada suscipit congue vel ante. Maecenas vehicula ipsum
+          <br></br>
+          <CircleIcon
+            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
+          ></CircleIcon>
+          Quisque faucibus nisi at luctus tempor. Sed at diam non quam males
+          <br></br>
+          <CircleIcon
+            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
+          ></CircleIcon>
+          porta orci tristique, vel hendrerit ante pulvinar. Duis eget tempor
+          tellus.
+          <br></br>
+          <CircleIcon
+            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
+          ></CircleIcon>
+          vestibulum elit at, vulputate ligula. Ut dapibus urna in tristique
+          eleifend
+          <br></br>
+          <CircleIcon
+            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
+          ></CircleIcon>
+          quam malesuada suscipit congue vel ante. Maecenas vehicula ipsum
+          <br></br>
+          <p className="blog-content">Nunc cursus sapien quis nunc mollis auctor. Morbi at malesuada augue. Maecenas volutpat luctus orci ut vehicula. Nullam gravida enim sit amet augue imperdiet vestibulum Aliquam et mi euismod, volutpat ex id, feugiat ipsum. Praesent tempus nibh lorem, at fermentum dolor luctus non. Etiam suscipit, purus fermentum sagittis ullamcorper diam elit pulvinar turpis, sit amet mattis tortor est quis libero. Sed pretium volutpat velit id blandit. Nam et imperdiet nunc Nunc cursus sapien quis nunc mollis auctor. Morbi at malesuada augue. Maecenas volutpat luctus orci ut vehicula. Nullam gravida enim sit amet augue imperdiet vestibulum. Aliquam et mi euismod, volutpat ex id, feugiat .</p>
+        </Box>
+        <hr></hr>
       </Box>
       {/* main section end */}
+      {/* footer section start */}
+              <Footer></Footer>
+      {/* footer section end */}
     </div>
   );
 };

@@ -4,8 +4,11 @@ import React from 'react';
 // import Header from './pages/Header';
 // import Footer from './pages/Footer';
 // import About from './pages/About';
-import Blog from "./pages/Blog";
+// import Blog from "./pages/Blog";
 // import Hb from './pages/Hb';
+import Gallery from './pages/Gallery';
+
+
 import './App.css';
 
 function App() {
@@ -17,8 +20,9 @@ function App() {
       <Header></Header>
       <Footer></Footer> */}
       {/* <About></About> */}
-       <Blog></Blog> 
-   {/* <Hb></Hb> */}
+      {/* <Blog></Blog>   */}
+      {/* <Hb></Hb> */}
+      <Gallery></Gallery>
   </>
 
 
