@@ -724,21 +724,60 @@
 .Blog-info img {
   width: 100%;
 }
-.blog-date{
+.blog-date {
   text-align: center;
   padding: 20px 0px;
 }
-.blog-topic{
+.blog-topic {
   padding: 30px 0px;
   font-size: 16px;
 }
-.blog-iconimg{
+.blog-iconimg {
   width: 100%;
-
 }
-.blog-bottom{
-  padding-top:30px;
+.blog-bottom {
+  padding-top: 30px;
 }
-.blog-content{
+.blog-content {
   padding: 30px 0px;
+}
+.gallery {
+  text-align: center;
+  padding: 80px 0px;
+ 
+}
+.gallery h1 {
+  font-size: 40px;
+  padding-bottom: 80px;
+}
+.gallery p {
+  font-size: 16px;
+}
+.gallery-img img {
+  width: 100%;
+}
+.set {
+  background-image: url("./img/mask-patten-style.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-color: #faf2e1;
+  padding: 80px 30px;
+}
+.set p{
+  font-size: 16px;
+}
+.set h1{
+  font-size: 40px;
+}
+.set span{
+  font-size: 14px;
+}
+.set-video video{
+  width: 100%;
+  
+}
+.set-video{
+  padding-top: 50px;
 }

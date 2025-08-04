@@ -18,6 +18,17 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Link from "@mui/material/Link";
+import v1 from "../img/LiLac-01.mp4";
+import v2 from "../img/LiLac-02.mp4";
+import v3 from "../img/LiLac-03.mp4";
+import Footer from "./Footer";
+import gallery1 from "../img/gallery-1-659x1024.jpg";
+import gallery2 from "../img/gallery-2-1-659x1024.jpg";
+import gallery3 from "../img/gallery-3-659x1024.jpg";
+import gallery4 from "../img/gallery-4-1-659x1024.jpg";
+import gallery5 from "../img/gallery-5-659x1024.jpg";
+
+import Grid from "@mui/material/Grid";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Shop", "Blog", "Gallery", "Pages"];
@@ -48,7 +59,17 @@ const Gallery = (props) => {
       </List>
     </Box>
   );
-
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    arrows: false,
+  };
   return (
     <div>
       {/* header section start */}
@@ -154,6 +175,60 @@ const Gallery = (props) => {
         </Box>
       </Box>
       {/* header section end */}
+
+      {/* main section start */}
+
+      <Box className="gallery">
+        <p>ORGANIC IS THE WAY TO GO</p>
+        <h1>Our Product Gallery</h1>
+        <Box className="gallery-img">
+          <Grid container spacing={2}>
+            <Grid size={2.4}>
+              <img src={gallery1} alt="ad1" />
+            </Grid>
+            <Grid size={2.4}>
+              <img src={gallery2} alt="ad1" />
+            </Grid>
+            <Grid size={2.4}>
+              <img src={gallery3} alt="ad1" />
+            </Grid>
+            <Grid size={2.4}>
+              <img src={gallery4} alt="ad1" />
+            </Grid>
+            <Grid size={2.4}>
+              <img src={gallery5} alt="ad1" />
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+      {/* main section end */}
+
+      {/* set section start */}
+      <Box className="set">
+        <p>ORGANIC IS THE WAY TO GO</p>
+        <h1>Best Nature & Organic Sets</h1>
+        <span>
+          Eget dolor morbi non arcu risus. Sagittis vitae et leo duis ut diam
+          quam nulla porttitor. Fermentum posuere urna risus nec duis ut.
+        </span>
+        <Box className="set-video">
+          <Grid container spacing={2}>
+            <Grid size={4}>
+              <video src={v1} autoPlay muted playsInline loop />
+            </Grid>
+            <Grid size={4}>
+              <video src={v2} autoPlay muted playsInline loop />
+            </Grid>
+            <Grid size={4}>
+              <video src={v3} autoPlay muted playsInline loop />
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+      {/* set section end */}
+      {/* footer section start */}
+      <Footer></Footer>
+      {/* footer section end */}
     </div>
   );
 };
