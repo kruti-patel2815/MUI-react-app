@@ -59,8 +59,9 @@ import shop2 from "../img/insta-img-3.jpg";
 import shop3 from "../img/insta-img-4.jpg";
 import shop4 from "../img/insta-img-5-300x300.jpg";
 import shop5 from "../img/insta-img-6-300x300.jpg";
-
-
+import Headerbottom from "./Headerbottom";
+import Headertop from "./Headertop";
+import Footer from "./Footer";
 
 const Header = (props) => {
   const { window } = props;
@@ -153,7 +154,8 @@ const Header = (props) => {
   return (
     <>
       {/* header section start */}
-      
+      <Headertop></Headertop>
+      <Headerbottom></Headerbottom>
       {/* header section end */}
       {/* <hero section start> */}
       <Box
@@ -916,6 +918,10 @@ const Header = (props) => {
         </Box>
       </Box>
       {/* shop section end */}
+
+      {/* footer section start */}
+            <Footer></Footer>
+      {/* footer section end */}
     </>
   );
 };

@@ -781,3 +781,40 @@
 .set-video{
   padding-top: 50px;
 }
+.product-detail h5 a{
+  color: black;
+}
+.product-detail h5 a:hover{
+  color:  rgb(248, 155, 68);
+}
+.history{
+  padding: 80px 30px;
+}
+.h-left{
+  padding-left: 30px;
+}
+.h-left h4{
+  font-size: 16px;
+  padding-top: 20px;
+}
+.h-left h1{
+  font-size: 40px;
+  
+}
+.h-left img{
+  width: 100%;
+  padding-top: 40px;
+}
+.h-right{
+  padding-left: 10px;
+  padding-right:30px ;
+}
+.h-right img{
+  width: 100%;
+}
+.right-img img{
+  width: 100%;
+}
+.right-img{
+  padding: 24px 0px;
+}
