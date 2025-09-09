@@ -14,12 +14,11 @@ import CssBaseline from "@mui/material/CssBaseline";
 import IconButton from "@mui/material/IconButton";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Shop", "Blog", "Gallery", "Pages"];
+
 const Headerbottom = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -27,6 +26,7 @@ const Headerbottom = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
@@ -37,86 +37,98 @@ const Headerbottom = (props) => {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ul style={{ listStyle: "none", padding: 0 }}>
+          <li>
+            <Link to="/" style={{color:"black"}}>Home</Link>
+          </li>
+          <li>
+            <Link to="/about"  style={{color:"black"}}>About</Link>
+          </li>
+          <li>
+            <Link to="/shop"  style={{color:"black"}}>Shop</Link>
+          </li>
+          <li>
+            <Link to="/blog"  style={{color:"black"}}>Blog</Link>
+          </li>
+          <li>
+            <Link to="/gallery"  style={{color:"black"}}>Gallery</Link>
+          </li>
+          <li>
+            <Link to="/pages"  style={{color:"black"}}>Pages</Link>
+          </li>
+        </ul>
       </List>
     </Box>
   );
 
   return (
-    <div>
-      {/* header section start */}
-      <Box sx={{ display: "flex" }}>
-        <CssBaseline />
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
 
-        <AppBar
-          component="nav"
-          sx={{ backgroundColor: "white", position: "static" }}
-        >
-          <Toolbar>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
-            >
-              <img src={logo} alt="" width="100px" />
-            </Typography>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "block" }, color: "black" }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-              <a href="">
-                <PeopleIcon color="action" />
-              </a>
-            </Badge>
-            <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-              <a href="">
-                <ShoppingBagIcon color="action" />
-              </a>
-            </Badge>
-            <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-              <a href="">
-                <FavoriteIcon color="action" />
-              </a>
-            </Badge>
-          </Toolbar>
-        </AppBar>
-
-        <nav>
-          <Drawer
-            anchor="right"
-            container={container}
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true,
-            }}
-            sx={{
-              display: { xs: "block", sm: "block" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-              },
-            }}
+      {/* Header AppBar */}
+      <AppBar
+        component="nav"
+        sx={{ backgroundColor: "white", position: "static" }}
+      >
+        <Toolbar>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
           >
-            {drawer} 
-          </Drawer>
-        </nav>
-      </Box>
-      {/* header section end */}
-    </div>
+            <img src={logo} alt="logo" width="100px" />
+          </Typography>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, color: "black" }}
+          >
+            <MenuIcon />
+          </IconButton>
+
+          <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+            <Link to="/profile">
+              <PeopleIcon color="action" />
+            </Link>
+          </Badge>
+          <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+            <Link to="/cart">
+              <ShoppingBagIcon color="action" />
+            </Link>
+          </Badge>
+          <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+            <Link to="/wishlist">
+              <FavoriteIcon color="action" />
+            </Link>
+          </Badge>
+        </Toolbar>
+      </AppBar>
+
+      {/* Drawer */}
+      <nav>
+        <Drawer
+          anchor="right"
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: "block", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
+    </Box>
   );
 };
 

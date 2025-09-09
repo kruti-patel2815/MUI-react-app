@@ -29,7 +29,8 @@ import blog3 from "../img/shop-18.1.jpg";
 import blog4 from "../img/shop-8.1-768x998.webp";
 import Grid from "@mui/material/Grid";
 import CircleIcon from "@mui/icons-material/Circle";
-import Footer from './Footer';
+import Footer from "./Footer";
+import Headerbottom from "./Headerbottom";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Shop", "Blog", "Gallery", "Pages"];
@@ -63,297 +64,344 @@ const Blog = (props) => {
 
   return (
     <div>
-      {/* header section start */}
-      <Box className="header-blog">
-        <Box sx={{ position: "relative", zIndex: 2 }}>
-          <CssBaseline />
+      <Headerbottom></Headerbottom>
+        {/* header section start */}
+        <Box className="header-blog">
+          <Box sx={{ position: "relative", zIndex: 2 }}>
+            <CssBaseline />
 
-          <AppBar
-            component="nav"
-            sx={{
-              backgroundColor: "transparent",
-              boxShadow: "none",
-              position: "absolute",
-              zIndex: 2,
-              width: "100%",
-            }}
-          >
-            <Toolbar>
+            {/* <AppBar
+              component="nav"
+              sx={{
+                backgroundColor: "transparent",
+                boxShadow: "none",
+                position: "absolute",
+                zIndex: 2,
+                width: "100%",
+              }}
+            >
+              <Toolbar>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+                >
+                  <img src={logo} alt="" width="100px" />
+                </Typography>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, display: { sm: "block" }, color: "black" }}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+               
+                    <PeopleIcon color="action" />
+    
+                </Badge>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+       
+                    <ShoppingBagIcon color="action" />
+         
+                </Badge>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+           
+                    <FavoriteIcon color="action" />
+         
+                </Badge>
+              </Toolbar>
+            </AppBar> */}
+
+            <Box
+              sx={{
+                position: "absolute",
+                top: "200px",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                zIndex: 3,
+                textAlign: "center",
+                color: "#222",
+              }}
+            >
               <Typography
-                variant="h6"
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+                variant="h3"
+                component="h3"
+                sx={{ fontSize: "50px", fontWeight: "bold" }}
               >
-                <img src={logo} alt="" width="100px" />
+                Budget-friendly beauty treatment in metro cities
               </Typography>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: "block" }, color: "black" }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <PeopleIcon color="action" />
-                </a>
-              </Badge>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <ShoppingBagIcon color="action" />
-                </a>
-              </Badge>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <FavoriteIcon color="action" />
-                </a>
-              </Badge>
-            </Toolbar>
-          </AppBar>
+              <Typography variant="subtitle1" sx={{ fontSize: "14px" }}>
+                <Link
+                  sx={{
+                    color: "black",
+                    ":hover": { color: "rgba(230, 185, 144, 1)" },
+                  }}
+                  href="#"
+                  underline="none"
+                >
+                  {"Home"}
+                </Link>
+                / Budget-friendly beauty treatment in metro cities
+              </Typography>
+            </Box>
 
+            <nav>
+              <Drawer
+                anchor="right"
+                container={container}
+                variant="temporary"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{
+                  keepMounted: true,
+                }}
+                sx={{
+                  display: { xs: "block", sm: "block" },
+                  "& .MuiDrawer-paper": {
+                    boxSizing: "border-box",
+                    width: drawerWidth,
+                  },
+                }}
+              >
+                {drawer}
+              </Drawer>
+            </nav>
+          </Box>
+        </Box>
+        {/* header section end */}
+
+        {/* main section start */}
+        <Box className="Blog-info">
+          <img src={blog1} alt="ad1" />
+          <h5 className="blog-date">Jun - 12 - 2023</h5>
+          <hr></hr>
           <Box
             sx={{
-              position: "absolute",
-              top: "200px",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 3,
-              textAlign: "center",
-              color: "#222",
+              display: "flex",
+              justifyContent: "space-between",
+              pt: "20px",
+              pb: "50px",
             }}
           >
-            <Typography
-              variant="h3"
-              component="h3"
-              sx={{ fontSize: "50px", fontWeight: "bold" }}
-            >
-              Budget-friendly beauty treatment in metro cities
-            </Typography>
-            <Typography variant="subtitle1" sx={{ fontSize: "14px" }}>
+            <Box className="content-btn">
+              <button className="btn">MATTE MAKEUP</button>
+              <button className="btn" style={{ margin: "0px 0px 0px 10px" }}>
+                NUDE MAKEUP
+              </button>
+            </Box>
+            <Box className="blog-icon">
               <Link
                 sx={{
                   color: "black",
-                  ":hover": { color: "rgba(230, 185, 144, 1)" },
+                  ":hover": { color: "rgba(228, 162, 101, 1)" },
+                  padding: "10px",
                 }}
                 href="#"
                 underline="none"
               >
-                {"Home"}
+                <FacebookOutlinedIcon></FacebookOutlinedIcon>
               </Link>
-              / Budget-friendly beauty treatment in metro cities
-            </Typography>
+
+              <Link
+                sx={{
+                  color: "black",
+                  ":hover": { color: "rgba(228, 162, 101, 1)" },
+                  padding: "10px",
+                }}
+                href="#"
+                underline="none"
+              >
+                <TwitterIcon></TwitterIcon>
+              </Link>
+
+              <Link
+                sx={{
+                  color: "black",
+                  ":hover": { color: "rgba(228, 162, 101, 1)" },
+                  padding: "10px",
+                }}
+                href="#"
+                underline="none"
+              >
+                <GoogleIcon></GoogleIcon>
+              </Link>
+              <Link
+                sx={{
+                  color: "black",
+                  ":hover": { color: "rgba(228, 162, 101, 1)" },
+                  padding: "10px",
+                }}
+                href="#"
+                underline="none"
+              >
+                <PinterestIcon></PinterestIcon>
+              </Link>
+
+              <Link
+                sx={{
+                  color: "black",
+                  ":hover": { color: "rgba(228, 162, 101, 1)" },
+                  padding: "10px",
+                }}
+                href="#"
+                underline="none"
+              >
+                <EmailIcon></EmailIcon>
+              </Link>
+            </Box>
           </Box>
-
-          <nav>
-            <Drawer
-              anchor="right"
-              container={container}
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              ModalProps={{
-                keepMounted: true,
-              }}
-              sx={{
-                display: { xs: "block", sm: "block" },
-                "& .MuiDrawer-paper": {
-                  boxSizing: "border-box",
-                  width: drawerWidth,
-                },
-              }}
-            >
-              {drawer}
-            </Drawer>
-          </nav>
-        </Box>
-      </Box>
-      {/* header section end */}
-
-      {/* main section start */}
-      <Box className="Blog-info">
-        <img src={blog1} alt="ad1" />
-        <h5 className="blog-date">Jun - 12 - 2023</h5>
-        <hr></hr>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            pt: "20px",
-            pb: "50px",
-          }}
-        >
-          <Box className="content-btn">
-            <button className="btn">MATTE MAKEUP</button>
-            <button className="btn" style={{ margin: "0px 0px 0px 10px" }}>
-              NUDE MAKEUP
-            </button>
+          <Box>
+            <p>
+              Fusce mi velit, efficitur vel ante vitae, commodo molestie nisl.
+              In malesuada ligula eu mauris sodales, feugiat porttitor dui
+              rutrum. Vestibulum ultrices venenatis suscipit. Nulla facilisi.
+              Nullam dictum, enim aliquam scelerisque dapibus, lorem quam tempus
+              mauris, eu fringilla urna erat at lacus. Suspendisse ornare
+              dignissim quam non pulvinar. Lore ipsum dolor sit amet,
+              consectetur adipiscing elit. Vivamus malesuada finibus velit, in
+              sollicitudin diam accumsan in. Interdum et malesuada fames ac ante
+              ipsum primis in faucibus. Nulla pulvinar, quam eget porta viverra,
+              risus diam rutrum odio, a faucibus elit velit sit amet velit. Nam
+              aliquet fermentum lorem, eget ultrices lacus venenatis vitae.
+              Nullam dictum efficitur gravida. In non lobortis arcu, at luctus
+              odio.
+            </p>
+            <p className="blog-topic">
+              <strong>
+                “Proin vitae rhoncus erat, ut molestie augue. Integer accumsan,
+                diam vel gravida porttitor, nisi nulla faucibus est, sit amet
+                semper purus libero eget ex. Praesent ultricies lorem at erat
+                condimentum, porta blandit orci finibus.”{" "}
+              </strong>
+            </p>
           </Box>
-          <Box className="blog-icon">
-            <Link
-              sx={{
-                color: "black",
-                ":hover": { color: "rgba(228, 162, 101, 1)" },
-                padding: "10px",
-              }}
-              href="#"
-              underline="none"
-            >
-              <FacebookOutlinedIcon></FacebookOutlinedIcon>
-            </Link>
-
-            <Link
-              sx={{
-                color: "black",
-                ":hover": { color: "rgba(228, 162, 101, 1)" },
-                padding: "10px",
-              }}
-              href="#"
-              underline="none"
-            >
-              <TwitterIcon></TwitterIcon>
-            </Link>
-
-            <Link
-              sx={{
-                color: "black",
-                ":hover": { color: "rgba(228, 162, 101, 1)" },
-                padding: "10px",
-              }}
-              href="#"
-              underline="none"
-            >
-              <GoogleIcon></GoogleIcon>
-            </Link>
-            <Link
-              sx={{
-                color: "black",
-                ":hover": { color: "rgba(228, 162, 101, 1)" },
-                padding: "10px",
-              }}
-              href="#"
-              underline="none"
-            >
-              <PinterestIcon></PinterestIcon>
-            </Link>
-
-            <Link
-              sx={{
-                color: "black",
-                ":hover": { color: "rgba(228, 162, 101, 1)" },
-                padding: "10px",
-              }}
-              href="#"
-              underline="none"
-            >
-              <EmailIcon></EmailIcon>
-            </Link>
+          <Box
+            className="blog-iconimg"
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <Grid container spacing={2}>
+              <Grid size={4}>
+                <img src={blog2} alt="ad1" />
+              </Grid>
+              <Grid size={4}>
+                <img src={blog3} alt="ad1" />
+              </Grid>
+              <Grid size={4}>
+                <img src={blog4} alt="ad1" />
+              </Grid>
+            </Grid>
           </Box>
+          <Box className="blog-bottom">
+            <p className="blog-content">
+              Vestibulum imperdiet eleifend enim nec varius. Vivamus ac
+              facilisis mauris. Etiam a varius purus. Morbi id augue dictum,
+              malesuada ante eu, iaculis augue. Nullam aliquam mi vitae lacus
+              dictum ultricies. Pellentesque vel purus id est vestibulum mattis.
+              Etiam tincidunt finibus ornare. Nulla viverra libero ut ex
+              accumsan feugiat. Praesent a u velit. Sed ac arcu eget massa
+              varius posuere. Etiam ex dolor, condimentum nec ante non, gravida
+              volutpat ante. In et semper diam. Curabitur ac aliquam leo.
+            </p>
+            <CircleIcon
+              sx={{
+                color: "rgba(228, 162, 101, 1)",
+                fontSize: "12px",
+                mr: "15px",
+              }}
+            ></CircleIcon>
+            Quisque faucibus nisi at luctus tempor. Sed at diam non quam males
+            <br></br>
+            <CircleIcon
+              sx={{
+                color: "rgba(228, 162, 101, 1)",
+                fontSize: "12px",
+                mr: "15px",
+              }}
+            ></CircleIcon>
+            porta orci tristique, vel hendrerit ante pulvinar. Duis eget tempor
+            tellus.
+            <br></br>
+            <CircleIcon
+              sx={{
+                color: "rgba(228, 162, 101, 1)",
+                fontSize: "12px",
+                mr: "15px",
+              }}
+            ></CircleIcon>
+            vestibulum elit at, vulputate ligula. Ut dapibus urna in tristique
+            eleifend
+            <br></br>
+            <CircleIcon
+              sx={{
+                color: "rgba(228, 162, 101, 1)",
+                fontSize: "12px",
+                mr: "15px",
+              }}
+            ></CircleIcon>
+            quam malesuada suscipit congue vel ante. Maecenas vehicula ipsum
+            <br></br>
+            <CircleIcon
+              sx={{
+                color: "rgba(228, 162, 101, 1)",
+                fontSize: "12px",
+                mr: "15px",
+              }}
+            ></CircleIcon>
+            Quisque faucibus nisi at luctus tempor. Sed at diam non quam males
+            <br></br>
+            <CircleIcon
+              sx={{
+                color: "rgba(228, 162, 101, 1)",
+                fontSize: "12px",
+                mr: "15px",
+              }}
+            ></CircleIcon>
+            porta orci tristique, vel hendrerit ante pulvinar. Duis eget tempor
+            tellus.
+            <br></br>
+            <CircleIcon
+              sx={{
+                color: "rgba(228, 162, 101, 1)",
+                fontSize: "12px",
+                mr: "15px",
+              }}
+            ></CircleIcon>
+            vestibulum elit at, vulputate ligula. Ut dapibus urna in tristique
+            eleifend
+            <br></br>
+            <CircleIcon
+              sx={{
+                color: "rgba(228, 162, 101, 1)",
+                fontSize: "12px",
+                mr: "15px",
+              }}
+            ></CircleIcon>
+            quam malesuada suscipit congue vel ante. Maecenas vehicula ipsum
+            <br></br>
+            <p className="blog-content">
+              Nunc cursus sapien quis nunc mollis auctor. Morbi at malesuada
+              augue. Maecenas volutpat luctus orci ut vehicula. Nullam gravida
+              enim sit amet augue imperdiet vestibulum Aliquam et mi euismod,
+              volutpat ex id, feugiat ipsum. Praesent tempus nibh lorem, at
+              fermentum dolor luctus non. Etiam suscipit, purus fermentum
+              sagittis ullamcorper diam elit pulvinar turpis, sit amet mattis
+              tortor est quis libero. Sed pretium volutpat velit id blandit. Nam
+              et imperdiet nunc Nunc cursus sapien quis nunc mollis auctor.
+              Morbi at malesuada augue. Maecenas volutpat luctus orci ut
+              vehicula. Nullam gravida enim sit amet augue imperdiet vestibulum.
+              Aliquam et mi euismod, volutpat ex id, feugiat .
+            </p>
+          </Box>
+          <hr></hr>
         </Box>
-        <Box>
-          <p>
-            Fusce mi velit, efficitur vel ante vitae, commodo molestie nisl. In
-            malesuada ligula eu mauris sodales, feugiat porttitor dui rutrum.
-            Vestibulum ultrices venenatis suscipit. Nulla facilisi. Nullam
-            dictum, enim aliquam scelerisque dapibus, lorem quam tempus mauris,
-            eu fringilla urna erat at lacus. Suspendisse ornare dignissim quam
-            non pulvinar. Lore ipsum dolor sit amet, consectetur adipiscing
-            elit. Vivamus malesuada finibus velit, in sollicitudin diam accumsan
-            in. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-            Nulla pulvinar, quam eget porta viverra, risus diam rutrum odio, a
-            faucibus elit velit sit amet velit. Nam aliquet fermentum lorem,
-            eget ultrices lacus venenatis vitae. Nullam dictum efficitur
-            gravida. In non lobortis arcu, at luctus odio.
-          </p>
-          <p className="blog-topic">
-            <strong>
-              “Proin vitae rhoncus erat, ut molestie augue. Integer accumsan,
-              diam vel gravida porttitor, nisi nulla faucibus est, sit amet
-              semper purus libero eget ex. Praesent ultricies lorem at erat
-              condimentum, porta blandit orci finibus.”{" "}
-            </strong>
-          </p>
-        </Box>
-        <Box
-          className="blog-iconimg"
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
-          <Grid container spacing={2}>
-            <Grid size={4}>
-              <img src={blog2} alt="ad1" />
-            </Grid>
-            <Grid size={4}>
-              <img src={blog3} alt="ad1" />
-            </Grid>
-            <Grid size={4}>
-              <img src={blog4} alt="ad1" />
-            </Grid>
-          </Grid>
-        </Box>
-        <Box className="blog-bottom">
-          <p className="blog-content">
-            Vestibulum imperdiet eleifend enim nec varius. Vivamus ac facilisis
-            mauris. Etiam a varius purus. Morbi id augue dictum, malesuada ante
-            eu, iaculis augue. Nullam aliquam mi vitae lacus dictum ultricies.
-            Pellentesque vel purus id est vestibulum mattis. Etiam tincidunt
-            finibus ornare. Nulla viverra libero ut ex accumsan feugiat.
-            Praesent a u velit. Sed ac arcu eget massa varius posuere. Etiam ex
-            dolor, condimentum nec ante non, gravida volutpat ante. In et semper
-            diam. Curabitur ac aliquam leo.
-          </p>
-          <CircleIcon
-            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
-          ></CircleIcon>
-          Quisque faucibus nisi at luctus tempor. Sed at diam non quam males
-          <br></br>
-          <CircleIcon
-            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
-          ></CircleIcon>
-          porta orci tristique, vel hendrerit ante pulvinar. Duis eget tempor
-          tellus.
-          <br></br>
-          <CircleIcon
-            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
-          ></CircleIcon>
-          vestibulum elit at, vulputate ligula. Ut dapibus urna in tristique
-          eleifend
-          <br></br>
-          <CircleIcon
-            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
-          ></CircleIcon>
-          quam malesuada suscipit congue vel ante. Maecenas vehicula ipsum
-          <br></br>
-          <CircleIcon
-            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
-          ></CircleIcon>
-          Quisque faucibus nisi at luctus tempor. Sed at diam non quam males
-          <br></br>
-          <CircleIcon
-            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
-          ></CircleIcon>
-          porta orci tristique, vel hendrerit ante pulvinar. Duis eget tempor
-          tellus.
-          <br></br>
-          <CircleIcon
-            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
-          ></CircleIcon>
-          vestibulum elit at, vulputate ligula. Ut dapibus urna in tristique
-          eleifend
-          <br></br>
-          <CircleIcon
-            sx={{ color: "rgba(228, 162, 101, 1)", fontSize: "12px",mr:'15px' }}
-          ></CircleIcon>
-          quam malesuada suscipit congue vel ante. Maecenas vehicula ipsum
-          <br></br>
-          <p className="blog-content">Nunc cursus sapien quis nunc mollis auctor. Morbi at malesuada augue. Maecenas volutpat luctus orci ut vehicula. Nullam gravida enim sit amet augue imperdiet vestibulum Aliquam et mi euismod, volutpat ex id, feugiat ipsum. Praesent tempus nibh lorem, at fermentum dolor luctus non. Etiam suscipit, purus fermentum sagittis ullamcorper diam elit pulvinar turpis, sit amet mattis tortor est quis libero. Sed pretium volutpat velit id blandit. Nam et imperdiet nunc Nunc cursus sapien quis nunc mollis auctor. Morbi at malesuada augue. Maecenas volutpat luctus orci ut vehicula. Nullam gravida enim sit amet augue imperdiet vestibulum. Aliquam et mi euismod, volutpat ex id, feugiat .</p>
-        </Box>
-        <hr></hr>
-      </Box>
-      {/* main section end */}
-      {/* footer section start */}
-              <Footer></Footer>
-      {/* footer section end */}
+        {/* main section end */}
+        {/* footer section start */}
+        <Footer></Footer>
+        {/* footer section end */}
+      
     </div>
   );
 };

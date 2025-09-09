@@ -37,7 +37,7 @@ import p77 from "../img/shop-19.1-768x998.webp";
 import p8 from "../img/shop-17.jpg";
 import p88 from "../img/shop-17.1.jpg";
 import Footer from "./Footer";
-
+import Headerbottom from "./Headerbottom";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Shop", "Blog", "Gallery", "Pages"];
@@ -122,154 +122,156 @@ const Shop = (props) => {
 
   return (
     <div>
-      {/* header section start */}
-      <Box className="header-about">
-        <Box sx={{ position: "relative", zIndex: 2 }}>
-          <CssBaseline />
+      <Headerbottom></Headerbottom>
+        {/* header section start */}
+        <Box className="header-about">
+          <Box sx={{ position: "relative", zIndex: 2 }}>
+            <CssBaseline />
 
-          <AppBar
-            component="nav"
-            sx={{
-              backgroundColor: "transparent",
-              boxShadow: "none",
-              position: "absolute",
-              zIndex: 2,
-              width: "100%",
-            }}
-          >
-            <Toolbar>
-              <Typography
-                variant="h6"
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
-              >
-                <img src={logo} alt="" width="100px" />
-              </Typography>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: "block" }, color: "black" }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <PeopleIcon color="action" />
-                </a>
-              </Badge>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <ShoppingBagIcon color="action" />
-                </a>
-              </Badge>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <FavoriteIcon color="action" />
-                </a>
-              </Badge>
-            </Toolbar>
-          </AppBar>
-
-          <Box
-            sx={{
-              position: "absolute",
-              top: "150px",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 3,
-              textAlign: "center",
-              color: "#222",
-            }}
-          >
-            <Typography variant="h3" component="h3">
-              Shop
-            </Typography>
-            <Typography variant="subtitle1" sx={{ fontSize: "14px" }}>
-              <Link
-                sx={{
-                  color: "black",
-                  ":hover": { color: "rgba(230, 185, 144, 1)" },
-                }}
-                href="#"
-                underline="none"
-              >
-                {"HOME"}
-              </Link>
-              / SHOP
-            </Typography>
-          </Box>
-
-          <nav>
-            <Drawer
-              anchor="right"
-              container={container}
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              ModalProps={{
-                keepMounted: true,
-              }}
+            {/* <AppBar
+              component="nav"
               sx={{
-                display: { xs: "block", sm: "block" },
-                "& .MuiDrawer-paper": {
-                  boxSizing: "border-box",
-                  width: drawerWidth,
-                },
+                backgroundColor: "transparent",
+                boxShadow: "none",
+                position: "absolute",
+                zIndex: 2,
+                width: "100%",
               }}
             >
-              {drawer}
-            </Drawer>
-          </nav>
-        </Box>
-      </Box>
-      {/* header section end */}
-
-      {/* sale section start */}
-      <Box className="product-whole">
-        <Box className="product-top">
-          <h5>HOT SALE</h5>
-          <h2>Imported Products</h2>
-        </Box>
-        <Box className="gallery-container">
-          {products.map((p, idx) => (
-            <Box className="product-card" key={idx}>
-              <Box className="product-img">
-                <img src={p.main} alt="" className="main-img" />
-                <img src={p.hover} alt="" className="hover-img" />
-              </Box>
-              <Box className="product-detail">
-                <h5>
-                  <a href="#">{p.name}</a>
-                </h5>
-                <Box
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    color: "yellow",
-                  }}
+              <Toolbar>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
                 >
-                  <Rating
-                    readOnly
-                    precision={0.5}
-                    emptyIcon={
-                      <StarIcon style={{ color: "gold", opacity: 0.55 }} />
-                    }
-                  />
-                </Box>
-                <Box className="product-price">{p.price}</Box>
-              </Box>
+                  <img src={logo} alt="" width="100px" />
+                </Typography>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, display: { sm: "block" }, color: "black" }}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+                  <a href="">
+                    <PeopleIcon color="action" />
+                  </a>
+                </Badge>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+                  <a href="">
+                    <ShoppingBagIcon color="action" />
+                  </a>
+                </Badge>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+                  <a href="">
+                    <FavoriteIcon color="action" />
+                  </a>
+                </Badge>
+              </Toolbar>
+            </AppBar> */}
+
+            <Box
+              sx={{
+                position: "absolute",
+                top: "150px",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                zIndex: 3,
+                textAlign: "center",
+                color: "#222",
+              }}
+            >
+              <Typography variant="h3" component="h3">
+                Shop
+              </Typography>
+              <Typography variant="subtitle1" sx={{ fontSize: "14px" }}>
+                <Link
+                  sx={{
+                    color: "black",
+                    ":hover": { color: "rgba(230, 185, 144, 1)" },
+                  }}
+                  href="#"
+                  underline="none"
+                >
+                  {"HOME"}
+                </Link>
+                / SHOP
+              </Typography>
             </Box>
-          ))}
+
+            <nav>
+              <Drawer
+                anchor="right"
+                container={container}
+                variant="temporary"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{
+                  keepMounted: true,
+                }}
+                sx={{
+                  display: { xs: "block", sm: "block" },
+                  "& .MuiDrawer-paper": {
+                    boxSizing: "border-box",
+                    width: drawerWidth,
+                  },
+                }}
+              >
+                {drawer}
+              </Drawer>
+            </nav>
+          </Box>
         </Box>
-      </Box>
+        {/* header section end */}
 
-      {/* sale section end */}
+        {/* sale section start */}
+        <Box className="product-whole">
+          <Box className="product-top">
+            <h5>HOT SALE</h5>
+            <h2>Imported Products</h2>
+          </Box>
+          <Box className="gallery-container">
+            {products.map((p, idx) => (
+              <Box className="product-card" key={idx}>
+                <Box className="product-img">
+                  <img src={p.main} alt="" className="main-img" />
+                  <img src={p.hover} alt="" className="hover-img" />
+                </Box>
+                <Box className="product-detail">
+                  <h5>
+                    <a href="#">{p.name}</a>
+                  </h5>
+                  <Box
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      color: "yellow",
+                    }}
+                  >
+                    <Rating
+                      readOnly
+                      precision={0.5}
+                      emptyIcon={
+                        <StarIcon style={{ color: "gold", opacity: 0.55 }} />
+                      }
+                    />
+                  </Box>
+                  <Box className="product-price">{p.price}</Box>
+                </Box>
+              </Box>
+            ))}
+          </Box>
+        </Box>
 
-      {/* footer section start */}
-          <Footer></Footer>
-      {/* footer section end */}
+        {/* sale section end */}
+
+        {/* footer section start */}
+        <Footer></Footer>
+        {/* footer section end */}
+      
     </div>
   );
 };

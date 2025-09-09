@@ -27,7 +27,7 @@ import gallery2 from "../img/gallery-2-1-659x1024.jpg";
 import gallery3 from "../img/gallery-3-659x1024.jpg";
 import gallery4 from "../img/gallery-4-1-659x1024.jpg";
 import gallery5 from "../img/gallery-5-659x1024.jpg";
-
+import Headerbottom from "./Headerbottom";
 import Grid from "@mui/material/Grid";
 
 const drawerWidth = 240;
@@ -72,163 +72,165 @@ const Gallery = (props) => {
   };
   return (
     <div>
-      {/* header section start */}
-      <Box className="header-about">
-        <Box sx={{ position: "relative", zIndex: 2 }}>
-          <CssBaseline />
+      <Headerbottom></Headerbottom>
+        {/* header section start */}
+        <Box className="header-about">
+          <Box sx={{ position: "relative", zIndex: 2 }}>
+            <CssBaseline />
 
-          <AppBar
-            component="nav"
-            sx={{
-              backgroundColor: "transparent",
-              boxShadow: "none",
-              position: "absolute",
-              zIndex: 2,
-              width: "100%",
-            }}
-          >
-            <Toolbar>
-              <Typography
-                variant="h6"
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
-              >
-                <img src={logo} alt="" width="100px" />
-              </Typography>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: "block" }, color: "black" }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <PeopleIcon color="action" />
-                </a>
-              </Badge>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <ShoppingBagIcon color="action" />
-                </a>
-              </Badge>
-              <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-                <a href="">
-                  <FavoriteIcon color="action" />
-                </a>
-              </Badge>
-            </Toolbar>
-          </AppBar>
-
-          <Box
-            sx={{
-              position: "absolute",
-              top: "150px",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 3,
-              textAlign: "center",
-              color: "#222",
-            }}
-          >
-            <Typography variant="h3" component="h3">
-              Gallery
-            </Typography>
-            <Typography variant="subtitle1" sx={{ fontSize: "14px" }}>
-              <Link
-                sx={{
-                  color: "black",
-                  ":hover": { color: "rgba(230, 185, 144, 1)" },
-                }}
-                href="#"
-                underline="none"
-              >
-                {"HOME"}
-              </Link>
-              / GALLERY
-            </Typography>
-          </Box>
-
-          <nav>
-            <Drawer
-              anchor="right"
-              container={container}
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              ModalProps={{
-                keepMounted: true,
-              }}
+            {/* <AppBar
+              component="nav"
               sx={{
-                display: { xs: "block", sm: "block" },
-                "& .MuiDrawer-paper": {
-                  boxSizing: "border-box",
-                  width: drawerWidth,
-                },
+                backgroundColor: "transparent",
+                boxShadow: "none",
+                position: "absolute",
+                zIndex: 2,
+                width: "100%",
               }}
             >
-              {drawer}
-            </Drawer>
-          </nav>
-        </Box>
-      </Box>
-      {/* header section end */}
+              <Toolbar>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+                >
+                  <img src={logo} alt="" width="100px" />
+                </Typography>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, display: { sm: "block" }, color: "black" }}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+                  <a href="">
+                    <PeopleIcon color="action" />
+                  </a>
+                </Badge>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+                  <a href="">
+                    <ShoppingBagIcon color="action" />
+                  </a>
+                </Badge>
+                <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
+                  <a href="">
+                    <FavoriteIcon color="action" />
+                  </a>
+                </Badge>
+              </Toolbar>
+            </AppBar> */}
 
-      {/* main section start */}
+            <Box
+              sx={{
+                position: "absolute",
+                top: "150px",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                zIndex: 3,
+                textAlign: "center",
+                color: "#222",
+              }}
+            >
+              <Typography variant="h3" component="h3">
+                Gallery
+              </Typography>
+              <Typography variant="subtitle1" sx={{ fontSize: "14px" }}>
+                <Link
+                  sx={{
+                    color: "black",
+                    ":hover": { color: "rgba(230, 185, 144, 1)" },
+                  }}
+                  href="#"
+                  underline="none"
+                >
+                  {"HOME"}
+                </Link>
+                / GALLERY
+              </Typography>
+            </Box>
 
-      <Box className="gallery">
-        <p>ORGANIC IS THE WAY TO GO</p>
-        <h1>Our Product Gallery</h1>
-        <Box className="gallery-img">
-          <Grid container spacing={2}>
-            <Grid size={2.4}>
-              <img src={gallery1} alt="ad1" />
-            </Grid>
-            <Grid size={2.4}>
-              <img src={gallery2} alt="ad1" />
-            </Grid>
-            <Grid size={2.4}>
-              <img src={gallery3} alt="ad1" />
-            </Grid>
-            <Grid size={2.4}>
-              <img src={gallery4} alt="ad1" />
-            </Grid>
-            <Grid size={2.4}>
-              <img src={gallery5} alt="ad1" />
-            </Grid>
-          </Grid>
+            <nav>
+              <Drawer
+                anchor="right"
+                container={container}
+                variant="temporary"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{
+                  keepMounted: true,
+                }}
+                sx={{
+                  display: { xs: "block", sm: "block" },
+                  "& .MuiDrawer-paper": {
+                    boxSizing: "border-box",
+                    width: drawerWidth,
+                  },
+                }}
+              >
+                {drawer}
+              </Drawer>
+            </nav>
+          </Box>
         </Box>
-      </Box>
-      {/* main section end */}
+        {/* header section end */}
 
-      {/* set section start */}
-      <Box className="set">
-        <p>ORGANIC IS THE WAY TO GO</p>
-        <h1>Best Nature & Organic Sets</h1>
-        <span>
-          Eget dolor morbi non arcu risus. Sagittis vitae et leo duis ut diam
-          quam nulla porttitor. Fermentum posuere urna risus nec duis ut.
-        </span>
-        <Box className="set-video">
-          <Grid container spacing={2}>
-            <Grid size={4}>
-              <video src={v1} autoPlay muted playsInline loop />
+        {/* main section start */}
+
+        <Box className="gallery">
+          <p>ORGANIC IS THE WAY TO GO</p>
+          <h1>Our Product Gallery</h1>
+          <Box className="gallery-img">
+            <Grid container spacing={2}>
+              <Grid size={2.4}>
+                <img src={gallery1} alt="ad1" />
+              </Grid>
+              <Grid size={2.4}>
+                <img src={gallery2} alt="ad1" />
+              </Grid>
+              <Grid size={2.4}>
+                <img src={gallery3} alt="ad1" />
+              </Grid>
+              <Grid size={2.4}>
+                <img src={gallery4} alt="ad1" />
+              </Grid>
+              <Grid size={2.4}>
+                <img src={gallery5} alt="ad1" />
+              </Grid>
             </Grid>
-            <Grid size={4}>
-              <video src={v2} autoPlay muted playsInline loop />
-            </Grid>
-            <Grid size={4}>
-              <video src={v3} autoPlay muted playsInline loop />
-            </Grid>
-          </Grid>
+          </Box>
         </Box>
-      </Box>
-      {/* set section end */}
-      {/* footer section start */}
-      <Footer></Footer>
-      {/* footer section end */}
+        {/* main section end */}
+
+        {/* set section start */}
+        <Box className="set">
+          <p>ORGANIC IS THE WAY TO GO</p>
+          <h1>Best Nature & Organic Sets</h1>
+          <span>
+            Eget dolor morbi non arcu risus. Sagittis vitae et leo duis ut diam
+            quam nulla porttitor. Fermentum posuere urna risus nec duis ut.
+          </span>
+          <Box className="set-video">
+            <Grid container spacing={2}>
+              <Grid size={4}>
+                <video src={v1} autoPlay muted playsInline loop />
+              </Grid>
+              <Grid size={4}>
+                <video src={v2} autoPlay muted playsInline loop />
+              </Grid>
+              <Grid size={4}>
+                <video src={v3} autoPlay muted playsInline loop />
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+        {/* set section end */}
+        {/* footer section start */}
+        <Footer></Footer>
+        {/* footer section end */}
+      
     </div>
   );
 };
