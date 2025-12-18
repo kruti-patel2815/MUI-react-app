@@ -139,10 +139,10 @@ const Blog = (props) => {
                     color: "black",
                     ":hover": { color: "rgba(230, 185, 144, 1)" },
                   }}
-                  href="#"
+                  href="/"
                   underline="none"
                 >
-                  {"Home"}
+                  Home
                 </Link>
                 / Budget-friendly beauty treatment in metro cities
               </Typography>

@@ -166,10 +166,10 @@ const Pages = (props) => {
                     color: "black",
                     ":hover": { color: "rgba(230, 185, 144, 1)" },
                   }}
-                  href="#"
+                  href="/"
                   underline="none"
                 >
-                  {"HOME"}
+                  HOME
                 </Link>
                 / HISTORY
               </Typography>

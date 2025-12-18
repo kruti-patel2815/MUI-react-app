@@ -131,14 +131,15 @@ const About = (props) => {
               </Typography>
               <Typography variant="subtitle1" sx={{ fontSize: "14px" }}>
                 <Link
+                  
                   sx={{
                     color: "black",
                     ":hover": { color: "rgba(230, 185, 144, 1)" },
                   }}
-                  href="#"
+                  href="/"
                   underline="none"
                 >
-                  {"HOME"}
+                  HOME
                 </Link>
                 / ABOUT
               </Typography>

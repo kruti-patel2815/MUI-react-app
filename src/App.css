@@ -6,10 +6,43 @@
   text-decoration: none;
 }
 
+/* headertop start */
+
 .slider-container {
   background-color: #ecdec1;
   padding: 10px 0px;
+  overflow: hidden; 
 }
+
+
+.slider-container h3 {
+  color: #000; 
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0 15px;
+  font-weight: normal;
+}
+
+
+@media (max-width: 768px) {
+  .slider-container h3 {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .slider-container h3 {
+    font-size: 13px;
+  }
+}
+/* header top end */
+/* Existing CSS */
 
 .css-cyqh1t-MuiPaper-root-MuiDrawer-paper {
   left: 81% !important;
@@ -23,16 +56,95 @@
   position: relative;
 }
 
-.text {
+/* Responsive text positioning */
+.text, .text1 {
   position: absolute;
   top: 50%;
-  right: 5%;
   transform: translateY(-50%);
   color: black;
-  text-align: right;
-  max-width: 400px;
 }
 
+.text {
+  right: 5%;
+  text-align: right;
+}
+
+.text1 {
+  left: 5%;
+  text-align: left;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .text, .text1 {
+    right: 2%;
+    left: 2%;
+    text-align: center;
+    max-width: 96%;
+    width: 96%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+  }
+  
+  .text h5, .text1 h5 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .text h1, .text1 h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  
+  .text span, .text1 span {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-width: 120px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .text, .text1 {
+    max-width: 300px;
+  }
+  
+  .text h5, .text1 h5 {
+    font-size: 16px;
+  }
+  
+  .text h1, .text1 h1 {
+    font-size: 32px;
+  }
+  
+  .text span, .text1 span {
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .text, .text1 {
+    max-width: 350px;
+  }
+  
+  .text h1, .text1 h1 {
+    font-size: 40px;
+  }
+}
+
+/* Button hover effect */
 .btn {
   position: relative;
   padding: 15px 25px;
@@ -64,6 +176,7 @@
 .btn:hover {
   color: white;
 }
+/* hero start */
 
 .text1 {
   position: absolute;
@@ -106,6 +219,7 @@
 .t1 {
   padding: 10px;
 }
+/* hero end */
 
 .info {
   width: 100%;
@@ -210,7 +324,7 @@
 
 .product-detail {
   margin-top: 200px;
-  /* Adjust this as needed based on image height */
+  
 }
 
 .product-title h5 a {
@@ -818,3 +932,4 @@
 .right-img{
   padding: 24px 0px;
 }
+

@@ -11,8 +11,25 @@ const Headertop = () => {
         speed: 4000,
         autoplaySpeed: 2000,
         cssEase: "linear",
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
+    
     return (
         <div className="slider-container">
             <Slider {...settings}>
@@ -25,10 +42,9 @@ const Headertop = () => {
                 <div>
                     <h3>Use Code : Lilac20 On Checkout</h3>
                 </div>
-               
             </Slider>
         </div>
     );
 };
 
-export default Headertop
+export default Headertop;

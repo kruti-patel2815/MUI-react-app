@@ -14,8 +14,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import IconButton from "@mui/material/IconButton";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -30,6 +31,16 @@ const Headerbottom = (props) => {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
+  // Navigation items
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Shop", path: "/shop" },
+    { name: "Blog", path: "/blog" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Pages", path: "/pages" },
+  ];
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -37,26 +48,22 @@ const Headerbottom = (props) => {
       </Typography>
       <Divider />
       <List>
-        <ul style={{ listStyle: "none", padding: 0 }}>
-          <li>
-            <Link to="/" style={{color:"black"}}>Home</Link>
-          </li>
-          <li>
-            <Link to="/about"  style={{color:"black"}}>About</Link>
-          </li>
-          <li>
-            <Link to="/shop"  style={{color:"black"}}>Shop</Link>
-          </li>
-          <li>
-            <Link to="/blog"  style={{color:"black"}}>Blog</Link>
-          </li>
-          <li>
-            <Link to="/gallery"  style={{color:"black"}}>Gallery</Link>
-          </li>
-          <li>
-            <Link to="/pages"  style={{color:"black"}}>Pages</Link>
-          </li>
-        </ul>
+        {navItems.map((item) => (
+          <ListItem key={item.name} disablePadding>
+            <Link
+              to={item.path}
+              style={{
+                color: "black",
+                textDecoration: "none",
+                width: "100%",
+                padding: "12px 16px",
+                display: "block",
+              }}
+            >
+              <ListItemText primary={item.name} />
+            </Link>
+          </ListItem>
+        ))}
       </List>
     </Box>
   );
@@ -68,48 +75,81 @@ const Headerbottom = (props) => {
       {/* Header AppBar */}
       <AppBar
         component="nav"
-        sx={{ backgroundColor: "white", position: "static" }}
+        sx={{
+          backgroundColor: "white",
+          position: "static",
+          boxShadow: "none",
+          borderBottom: "1px solid #eee",
+        }}
       >
-        <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
-          >
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          {/* Logo */}
+          <Typography variant="h6" component="div">
             <img src={logo} alt="logo" width="100px" />
           </Typography>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, color: "black" }}
-          >
-            <MenuIcon />
-          </IconButton>
 
-          <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-            <Link to="/profile">
-              <PeopleIcon color="action" />
-            </Link>
-          </Badge>
-          <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-            <Link to="/cart">
-              <ShoppingBagIcon color="action" />
-            </Link>
-          </Badge>
-          <Badge badgeContent={1} color="primary" sx={{ mr: 2 }}>
-            <Link to="/wishlist">
-              <FavoriteIcon color="action" />
-            </Link>
-          </Badge>
+          {/* Desktop Navigation Links - Hidden on mobile */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 4 }}>
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  "&:hover": {
+                    color: "#1976d2",
+                  },
+                }}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </Box>
+
+          {/* Icons Section */}
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            {/* Icons */}
+            <Box sx={{ display: "flex", gap: 2, mr: 2 }}>
+              <Badge badgeContent={1} color="primary">
+                <Link to="/profile">
+                  <PeopleIcon sx={{ color: "black" }} />
+                </Link>
+              </Badge>
+              <Badge badgeContent={1} color="primary">
+                <Link to="/cart">
+                  <ShoppingBagIcon sx={{ color: "black" }} />
+                </Link>
+              </Badge>
+              <Badge badgeContent={1} color="primary">
+                <Link to="/wishlist">
+                  <FavoriteIcon sx={{ color: "black" }} />
+                </Link>
+              </Badge>
+            </Box>
+
+            {/* Mobile Menu Button - Hidden on desktop */}
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{
+                display: { md: "none" },
+                color: "black",
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
 
-      {/* Drawer */}
-      <nav>
+      {/* Drawer for Mobile */}
+      <Box component="nav">
         <Drawer
-          anchor="right"
           container={container}
           variant="temporary"
           open={mobileOpen}
@@ -118,7 +158,7 @@ const Headerbottom = (props) => {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "block" },
+            display: { xs: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -127,7 +167,7 @@ const Headerbottom = (props) => {
         >
           {drawer}
         </Drawer>
-      </nav>
+      </Box>
     </Box>
   );
 };
