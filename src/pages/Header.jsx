@@ -106,14 +106,34 @@ const Header = (props) => {
   };
   const adicon = {
     dots: false,
+    arrows: false,
     infinite: true,
-    slidesToShow: 3,
+    speed: 500,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 6000,
     autoplaySpeed: 2000,
-    cssEase: "linear",
-    arrows: false,
+
+    responsive: [
+      {
+        breakpoint: 1024, // Tablet
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768, // Small Tablet
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480, // Mobile
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
   const test = {
     dots: false,
@@ -318,7 +338,90 @@ const Header = (props) => {
                 borderRadius: { xs: "8px", sm: "0" },
               }}
             >
-              {/* Similar text content as slide1 */}
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                  fontWeight: 600,
+                  mb: 1,
+                }}
+              >
+                LONG LASTING
+              </Typography>
+              <Typography
+                variant="h1"
+                sx={{
+                  fontSize: { xs: "24px", sm: "32px", md: "40px", lg: "48px" },
+                  fontWeight: 700,
+                  mb: 2,
+                  lineHeight: 1.2,
+                }}
+              >
+                Weightless & Waterproof
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                  mb: 3,
+                  display: { xs: "none", sm: "block" },
+                }}
+              >
+                Doaesent in nunc vel urna consequat mattis eget vel libero.
+                Phasellus pellentesque Proin tempus tempor diam, non
+                pellentesque quam ornare vel. Aenean laoree
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "12px",
+                  mb: 3,
+                  display: { xs: "block", sm: "none" },
+                }}
+              >
+                Doaesent in nunc vel urna consequat mattis eget vel libero.
+                Phasellus pellentesque...
+              </Typography>
+              <br />
+              <Button
+                className="btn"
+                sx={{
+                  position: "relative",
+                  padding: {
+                    xs: "10px 20px",
+                    sm: "12px 24px",
+                    md: "15px 30px",
+                  },
+                  color: "black",
+                  backgroundColor: "#ecdec1",
+                  border: "none",
+                  cursor: "pointer",
+                  overflow: "hidden",
+                  transition: "color 0.4s ease",
+                  zIndex: 1,
+                  fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                  minWidth: { xs: "120px", sm: "140px", md: "160px" },
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    height: "100%",
+                    width: 0,
+                    backgroundColor: "black",
+                    transition: "width 0.4s ease",
+                    zIndex: -1,
+                  },
+                  "&:hover": {
+                    color: "white",
+                    "&::before": {
+                      width: "100%",
+                    },
+                  },
+                }}
+              >
+                SHOP NOW
+              </Button>
             </Box>
           </div>
 
@@ -353,65 +456,137 @@ const Header = (props) => {
                 borderRadius: { xs: "8px", sm: "0" },
               }}
             >
-              {/* Similar text content as slide1 */}
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                  fontWeight: 600,
+                  mb: 1,
+                }}
+              >
+                LONG LASTING
+              </Typography>
+              <Typography
+                variant="h1"
+                sx={{
+                  fontSize: { xs: "24px", sm: "32px", md: "40px", lg: "48px" },
+                  fontWeight: 700,
+                  mb: 2,
+                  lineHeight: 1.2,
+                }}
+              >
+                Weightless & Waterproof
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                  mb: 3,
+                  display: { xs: "none", sm: "block" },
+                }}
+              >
+                Doaesent in nunc vel urna consequat mattis eget vel libero.
+                Phasellus pellentesque Proin tempus tempor diam, non
+                pellentesque quam ornare vel. Aenean laoree
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "12px",
+                  mb: 3,
+                  display: { xs: "block", sm: "none" },
+                }}
+              >
+                Doaesent in nunc vel urna consequat mattis eget vel libero.
+                Phasellus pellentesque...
+              </Typography>
+              <br />
+              <Button
+                className="btn"
+                sx={{
+                  position: "relative",
+                  padding: {
+                    xs: "10px 20px",
+                    sm: "12px 24px",
+                    md: "15px 30px",
+                  },
+                  color: "black",
+                  backgroundColor: "#ecdec1",
+                  border: "none",
+                  cursor: "pointer",
+                  overflow: "hidden",
+                  transition: "color 0.4s ease",
+                  zIndex: 1,
+                  fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                  minWidth: { xs: "120px", sm: "140px", md: "160px" },
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    height: "100%",
+                    width: 0,
+                    backgroundColor: "black",
+                    transition: "width 0.4s ease",
+                    zIndex: -1,
+                  },
+                  "&:hover": {
+                    color: "white",
+                    "&::before": {
+                      width: "100%",
+                    },
+                  },
+                }}
+              >
+                SHOP NOW
+              </Button>
             </Box>
           </div>
         </Slider>
       </Box>
 
-      <Box className="shipping">
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
-            <Grid size={4} className="icons">
-              <Box className="i1">
-                <LocalShippingOutlinedIcon
-                  sx={{ fontSize: 70 }}
-                ></LocalShippingOutlinedIcon>
-              </Box>
-              <Box className="t1">
+      <div className="shipping">
+        <div style={{ flexGrow: 1 }}>
+          <div className="grid-container">
+            <div className="grid-item icons">
+              <div className="i1">
+                <span class="material-icons"></span>
+              </div>
+              <div className="t1">
                 <h5>SHIPPING</h5>
-                <h3>
-                  Free Shipping
-                  <br></br> World wide
-                </h3>
-              </Box>
-            </Grid>
-            <Grid size={4} className="icons">
-              <Box className="i1">
-                <SupportAgentOutlinedIcon
-                  sx={{ fontSize: 70 }}
-                ></SupportAgentOutlinedIcon>
-              </Box>
-              <Box className="t1">
+                <h3>Free Shipping World wide</h3>
+              </div>
+            </div>
+
+            <div className="grid-item icons">
+              <div className="i1">
+                <span class="material-icons"></span>
+              </div>
+              <div className="t1">
                 <h5>HASSLE FREE</h5>
-                <h3>
-                  {" "}
-                  24*7 Customer
-                  <br></br>Support
-                </h3>
-              </Box>
-            </Grid>
-            <Grid size={4} className="icons">
-              <Box className="i1">
-                <Inventory2OutlinedIcon
-                  sx={{ fontSize: 70 }}
-                ></Inventory2OutlinedIcon>
-              </Box>
-              <Box className="t1">
+                <h3>24*7 Customer Support</h3>
+              </div>
+            </div>
+
+            <div className="grid-item icons">
+              <div className="i1">
+                <span class="material-icons"></span>
+              </div>
+              <div className="t1">
                 <h5>SECURED</h5>
                 <h3>Safe Packaging</h3>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* hero section end */}
 
       {/* information section start */}
 
       <Box className="info">
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
+          <Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
             <Grid size={3}>
               <div className="content-item">
                 <div className="content-icon">

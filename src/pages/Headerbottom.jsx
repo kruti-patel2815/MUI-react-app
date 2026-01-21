@@ -17,6 +17,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 
@@ -128,6 +129,45 @@ const Headerbottom = (props) => {
                   <FavoriteIcon sx={{ color: "black" }} />
                 </Link>
               </Badge>
+              <Button
+                className="btn"
+                sx={{
+                  position: "relative",
+                  padding: {
+                    xs: "0px 5px",
+                    sm: "0px 6px",
+                    md: "0px 8px",
+                  },
+                  color: "black",
+                  backgroundColor: "#ecdec1",
+                  border: "none",
+                  cursor: "pointer",
+                  overflow: "hidden",
+                  transition: "color 0.4s ease",
+                  zIndex: 1,
+                  fontSize: { xs: "12px", sm: "12px", md: "14px" },
+                  minWidth: { xs: "60px", sm: "70px", md: "80px" },
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    height: "100%",
+                    width: 0,
+                    backgroundColor: "black",
+                    transition: "width 0.4s ease",
+                    zIndex: -1,
+                  },
+                  "&:hover": {
+                    color: "white",
+                    "&::before": {
+                      width: "100%",
+                    },
+                  },
+                }}
+              >
+                LOGIN
+              </Button>
             </Box>
 
             {/* Mobile Menu Button - Hidden on desktop */}

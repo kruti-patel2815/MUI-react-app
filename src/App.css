@@ -11,19 +11,17 @@
 .slider-container {
   background-color: #ecdec1;
   padding: 10px 0px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-
 .slider-container h3 {
-  color: #000; 
+  color: #000;
   font-size: 14px;
   text-align: center;
   margin: 0;
   padding: 0 15px;
   font-weight: normal;
 }
-
 
 @media (max-width: 768px) {
   .slider-container h3 {
@@ -34,7 +32,6 @@
     padding: 0 10px;
   }
 }
-
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .slider-container h3 {
@@ -57,7 +54,8 @@
 }
 
 /* Responsive text positioning */
-.text, .text1 {
+.text,
+.text1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -76,7 +74,8 @@
 
 /* Responsive styles */
 @media (max-width: 600px) {
-  .text, .text1 {
+  .text,
+  .text1 {
     right: 2%;
     left: 2%;
     text-align: center;
@@ -86,24 +85,27 @@
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
   }
-  
-  .text h5, .text1 h5 {
+
+  .text h5,
+  .text1 h5 {
     font-size: 14px;
     margin-bottom: 8px;
   }
-  
-  .text h1, .text1 h1 {
+
+  .text h1,
+  .text1 h1 {
     font-size: 24px;
     margin-bottom: 12px;
     line-height: 1.2;
   }
-  
-  .text span, .text1 span {
+
+  .text span,
+  .text1 span {
     font-size: 12px;
     display: block;
     margin-bottom: 15px;
   }
-  
+
   .btn {
     padding: 10px 20px;
     font-size: 14px;
@@ -112,22 +114,26 @@
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .text, .text1 {
+  .text,
+  .text1 {
     max-width: 300px;
   }
-  
-  .text h5, .text1 h5 {
+
+  .text h5,
+  .text1 h5 {
     font-size: 16px;
   }
-  
-  .text h1, .text1 h1 {
+
+  .text h1,
+  .text1 h1 {
     font-size: 32px;
   }
-  
-  .text span, .text1 span {
+
+  .text span,
+  .text1 span {
     font-size: 14px;
   }
-  
+
   .btn {
     padding: 12px 24px;
     font-size: 14px;
@@ -135,11 +141,13 @@
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .text, .text1 {
+  .text,
+  .text1 {
     max-width: 350px;
   }
-  
-  .text h1, .text1 h1 {
+
+  .text h1,
+  .text1 h1 {
     font-size: 40px;
   }
 }
@@ -187,10 +195,10 @@
   text-align: left;
   max-width: 400px;
 }
-
+/* shipping  */
+/* Tamara original CSS with NO changes */
 .shipping {
   background-color: #ecdec1;
-
   width: 100%;
   margin-top: -7px;
 }
@@ -206,12 +214,12 @@
   padding: 10px;
 }
 
-.h3 {
+.t1 h3 {
   font-size: 20px !important;
   font-family: sans-serif;
 }
 
-.h5 {
+.t1 h5 {
   font-size: 12px !important;
   font-family: sans-serif;
 }
@@ -219,16 +227,41 @@
 .t1 {
   padding: 10px;
 }
-/* hero end */
 
+/* NEW: Grid container for responsiveness */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* shipping */
+/* hero end */
+/* info start */
 .info {
   width: 100%;
-
   padding: 70px 30px 70px 30px;
 }
 
 .content-item {
   text-align: center;
+  padding: 15px;
+  height: 100%;
+}
+
+.content-icon {
+  margin-bottom: 20px;
 }
 
 .content-title a {
@@ -237,10 +270,17 @@
   transition: color 0.3s ease;
   font-size: 20px;
   padding: 15px 0px;
+  display: inline-block;
 }
 
 .content-title a:hover {
   color: rgb(248, 155, 68);
+}
+
+.content-description p {
+  margin: 15px 0;
+  line-height: 1.6;
+  color: #555;
 }
 
 .content-btn a {
@@ -263,7 +303,6 @@
   height: 2px;
   width: 100%;
   background-color: rgb(248, 155, 68);
-  /* underline color */
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
@@ -277,6 +316,119 @@
   transform: scaleX(1);
 }
 
+/* RESPONSIVE ADJUSTMENTS FOR BETTER SPACING */
+
+/* Mobile (576px and below) - 1 column */
+@media (max-width: 576px) {
+  .info {
+    padding: 40px 15px;
+  }
+
+  .content-item {
+    padding: 25px 10px;
+    margin-bottom: 20px;
+  }
+
+  .content-icon .MuiSvgIcon-root {
+    font-size: 55px !important;
+  }
+
+  .content-title a {
+    font-size: 17px;
+    padding: 8px 0px;
+  }
+
+  .content-description p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+}
+
+/* Tablet (576px to 799px) - 2 columns */
+@media (min-width: 577px) and (max-width: 799px) {
+  .info {
+    padding: 50px 20px;
+  }
+
+  .content-item {
+    padding: 20px 15px;
+  }
+
+  .content-icon .MuiSvgIcon-root {
+    font-size: 60px !important;
+  }
+
+  .content-title a {
+    font-size: 18px;
+  }
+
+  .content-description p {
+    font-size: 15px;
+  }
+}
+
+/* Desktop (800px and above) - 4 columns */
+@media (min-width: 800px) {
+  .info {
+    padding: 70px 30px;
+  }
+
+  .content-icon .MuiSvgIcon-root {
+    font-size: 70px !important;
+  }
+
+  .content-title a {
+    font-size: 20px;
+  }
+
+  .content-description p {
+    font-size: 16px;
+  }
+}
+
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .info {
+    padding: 100px 50px;
+  }
+
+  .content-icon .MuiSvgIcon-root {
+    font-size: 80px !important;
+  }
+
+  .content-title a {
+    font-size: 22px;
+  }
+
+  .content-description p {
+    font-size: 18px;
+  }
+}
+
+/* Small Mobile (0px - 375px) */
+@media (max-width: 375px) {
+  .info {
+    padding: 30px 10px;
+  }
+
+  .content-item {
+    padding: 20px 5px;
+  }
+
+  .content-icon .MuiSvgIcon-root {
+    font-size: 50px !important;
+  }
+
+  .content-title a {
+    font-size: 16px;
+  }
+
+  .content-description p {
+    font-size: 13px;
+  }
+}
+
+/* info end */
 .product-card {
   text-align: center;
   padding: 10px;
@@ -324,7 +476,6 @@
 
 .product-detail {
   margin-top: 200px;
-  
 }
 
 .product-title h5 a {
@@ -359,29 +510,90 @@
 }
 
 .elementor-container {
-  padding: 20px 10px;
+  padding: 20px 10px 10px 10px;
 }
 
-.elementor-title {
-  padding-bottom: 20px;
-  padding-top: 10px;
-  font-size: 18px;
+.elementor-subtitle span {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.elementor-title h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 5px 0 15px 0;
+  color: #333;
+}
+
+.elementor-wrapper {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.elementor-section {
+  margin: 20px 0;
+}
+
+.container-bottom {
+  padding: 10px 0;
+}
+
+.elementor-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .elementor-box {
   display: flex;
-  padding: 10px 0px;
+  align-items: center;
+  padding: 8px 0;
+  min-height: auto;
+}
+
+.elementor-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.elementor-icon .MuiSvgIcon-root {
+  font-size: 30px !important;
+  color: #333;
 }
 
 .elementor-box h4 {
-  font-size: 18px;
-  padding-left: 20px;
-  padding-top: 10px;
+  font-size: 16px;
+  padding-left: 15px;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+}
+
+.elementor-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 25px;
 }
 
 .elementor-btn button {
   position: relative;
-  padding: 15px 25px;
+  padding: 12px 30px;
   color: black;
   background-color: #ecdec1;
   border: none;
@@ -389,6 +601,12 @@
   overflow: hidden;
   transition: color 0.4s ease;
   z-index: 1;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  min-width: 150px;
 }
 
 .elementor-btn button::before {
@@ -411,15 +629,402 @@
   color: white;
 }
 
-.elementor-bottom {
-  display: flex;
-}
-
 .elementor-info {
-  padding-left: 20px;
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.elementor-info h5 {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 3px 0;
+}
+
+.elementor-info p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.elementor-info .MuiSvgIcon-root {
+  color: #333;
+  font-size: 35px !important;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Large Desktops (1400px and above) */
+@media (min-width: 1400px) {
+  .elementor {
+    padding: 60px 80px;
+  }
+
+  .elementor-title h1 {
+    font-size: 42px;
+    margin: 8px 0 18px 0;
+  }
+
+  .elementor-wrapper {
+    font-size: 17px;
+    max-width: 90%;
+    margin-bottom: 25px;
+  }
+
+  .elementor-box h4 {
+    font-size: 17px;
+  }
+
+  .elementor-btn button {
+    padding: 14px 35px;
+    font-size: 15px;
+  }
+
+  .elementor-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .elementor-icon .MuiSvgIcon-root {
+    font-size: 35px !important;
+  }
+}
+
+/* Medium Desktops/Laptops (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .elementor {
+    padding: 50px 60px;
+  }
+
+  .elementor-title h1 {
+    font-size: 36px;
+    margin: 6px 0 16px 0;
+  }
+}
+
+/* Desktops (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .elementor {
+    padding: 40px 40px;
+  }
+
+  .elementor-title h1 {
+    font-size: 32px;
+    margin: 5px 0 15px 0;
+  }
+
+  .elementor-wrapper {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+}
+
+/* Tablets (768px - 991px) - 2 columns (ડાબે ઇમેજ, જમણે content) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .elementor {
+    padding: 40px 25px;
+  }
+
+  .elementor-container {
+    padding: 15px 0 5px 0;
+  }
+
+  .elementor-title h1 {
+    font-size: 28px;
+    margin: 5px 0 12px 0;
+  }
+
+  .elementor-wrapper {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .elementor-box {
+    padding: 6px 0;
+  }
+
+  .elementor-box h4 {
+    font-size: 15px;
+    padding-left: 12px;
+  }
+
+  .elementor-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .elementor-icon .MuiSvgIcon-root {
+    font-size: 25px !important;
+  }
+
+  .elementor-btn button {
+    padding: 10px 22px;
+    font-size: 13px;
+    min-width: 130px;
+  }
+
+  .elementor-info h5 {
+    font-size: 12px;
+  }
+
+  .elementor-info p {
+    font-size: 15px;
+  }
+
+  .elementor-info .MuiSvgIcon-root {
+    font-size: 30px !important;
+  }
+}
+
+/* 764px થી નીચે: Vertical layout (ઉપર ઇમેજ, નીચે content) */
+@media (max-width: 767px) {
+  .elementor {
+    padding: 35px 20px;
+  }
+
+  /* Vertical layout */
+  .elementor .MuiGrid-container {
+    flex-direction: column;
+  }
+
+  .elementor .MuiGrid-item {
+    width: 100% !important;
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .elementor .MuiGrid-item:first-child {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .elementor .MuiGrid-item img {
+    width: 70% !important;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .elementor-container {
+    padding: 0;
+    text-align: center;
+  }
+
+  .elementor-title h1 {
+    font-size: 26px;
+    text-align: center;
+    margin: 5px 0 15px 0;
+  }
+
+  .elementor-wrapper {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .elementor-subtitle {
+    text-align: center;
+  }
+
+  .elementor-subtitle span {
+    margin-bottom: 3px;
+  }
+
+  /* 4 boxes - 2 per row */
+  .container-bottom .MuiGrid-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container-bottom .MuiGrid-item {
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+  }
+
+  .elementor-wrap {
+    align-items: center;
+    gap: 15px;
+  }
+
+  .elementor-box {
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .elementor-box h4 {
+    padding-left: 12px;
+    font-size: 15px;
+  }
+
+  .elementor-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .elementor-icon .MuiSvgIcon-root {
+    font-size: 25px !important;
+  }
+
+  .elementor-bottom {
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  .elementor-info {
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+
+/* MOBILE ONLY: 575px થી નીચે - સંપૂર્ણ vertical stack */
+@media (max-width: 575px) {
+  .elementor {
+    padding: 30px 15px;
+  }
+
+  .elementor .MuiGrid-item:first-child {
+    margin-bottom: 25px;
+  }
+
+  .elementor .MuiGrid-item img {
+    width: 80% !important;
+    max-width: 300px;
+  }
+
+  .elementor-title h1 {
+    font-size: 22px;
+  }
+
+  .elementor-wrapper {
+    font-size: 14px;
+  }
+
+  .elementor-subtitle span {
+    font-size: 12px;
+  }
+
+  /* 4 boxes - 1 per row (vertical stack) */
+  .container-bottom .MuiGrid-container {
+    flex-direction: column;
+  }
+
+  .container-bottom .MuiGrid-item {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .elementor-wrap {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .elementor-box {
+    justify-content: center;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .elementor-box h4 {
+    font-size: 14px;
+  }
+
+  .elementor-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .elementor-icon .MuiSvgIcon-root {
+    font-size: 22px !important;
+  }
+
+  .elementor-bottom {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .elementor-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .elementor-btn button {
+    padding: 10px 25px;
+    font-size: 13px;
+    width: 100%;
+    max-width: 220px;
+    min-width: auto;
+  }
+
+  .elementor-info h5 {
+    font-size: 11px;
+  }
+
+  .elementor-info p {
+    font-size: 14px;
+  }
+
+  .elementor-info .MuiSvgIcon-root {
+    font-size: 28px !important;
+  }
+}
+
+/* Small Mobile (0px - 375px) */
+@media (max-width: 375px) {
+  .elementor {
+    padding: 20px 10px;
+  }
+
+  .elementor-title h1 {
+    font-size: 20px;
+  }
+
+  .elementor-box h4 {
+    font-size: 13px;
+  }
+
+  .elementor-btn button {
+    padding: 8px 20px;
+    font-size: 12px;
+    max-width: 200px;
+  }
+
+  .elementor-info p {
+    font-size: 13px;
+  }
+}
+
+/* For extremely wide screens (1800px+) */
+@media (min-width: 1800px) {
+  .elementor {
+    padding: 70px 120px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .elementor-title h1 {
+    font-size: 44px;
+    margin: 10px 0 20px 0;
+  }
+
+  .elementor-wrapper {
+    font-size: 18px;
+    max-width: 80%;
+  }
+
+  .elementor-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .elementor-icon .MuiSvgIcon-root {
+    font-size: 38px !important;
+  }
+}
 .product-top {
   text-align: center;
 
@@ -450,7 +1055,7 @@
 .image-list-wrap {
   display: flex;
 }
-
+/* sale section start */
 .product-card {
   text-align: center;
   padding: 10px;
@@ -539,6 +1144,56 @@
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .product-whole {
+    padding: 40px 15px; /* mobile friendly padding */
+  }
+
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -6px; /* small negative margin for spacing */
+  }
+
+  .product-card {
+    flex: 1 1 calc(50% - 12px); /* 2 cards per row */
+    margin: 6px;
+    height: auto; /* auto height for content */
+  }
+
+  /* Optional: single column on very small screens <480px */
+  @media (max-width: 480px) {
+    .product-card {
+      flex: 1 1 100%; /* single column */
+      margin: 5px 0;
+    }
+  }
+
+  .product-img {
+    height: 200px; /* smaller image height for mobile */
+  }
+
+  .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-detail {
+    padding: 10px;
+  }
+
+  .product-detail h5 a {
+    font-size: 14px;
+  }
+
+  .product-price span {
+    font-size: 14px;
+  }
+}
+
+/* sale section end */
+/* ad section start */
 .ad {
   padding: 80px 30px;
   background-image: url("./img/mask-patten-style.png");
@@ -649,10 +1304,172 @@
   padding: 25px;
   background-color: #ffffff;
 }
+
+/* Desktop/Laptop ≥1025px → koi change nathi */
+.ad-wrapper {
+  display: flex;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ad-wrapper {
+    display: flex;
+    flex-direction: row; /* Left + Right side by side */
+    align-items: stretch; /* Left + Right equal height */
+    gap: 20px; /* spacing between left and right */
+  }
+
+  .ad-left,
+  .ad-right {
+    width: 50%; /* equal width */
+    padding: 0 10px; /* inner padding */
+    margin-top: 0; /* remove extra margin top */
+  }
+
+  .ad-right {
+    padding-top: 10px; /* reduce top padding to minimal */
+  }
+
+  /* Text/font adjustments for tablet */
+  .content-title h2 {
+    font-size: 22px; /* slightly smaller than desktop */
+  }
+
+  .content-price {
+    font-size: 18px;
+  }
+
+  .content-detail {
+    padding: 2px 0px;
+  }
+  .content-detail p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .content-btn,
+  .content-btn2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .content-bottom {
+    flex-direction: row;
+    gap: 15px;
+   
+  }
+  .content-bottom {
+    margin-top: 5px;
+    padding: 8px 0px;
+}
+
+  .tag,
+  .category {
+    flex-wrap: nowrap;
+  }
+
+  .content-box,
+  .content-ad {
+    padding: 15px; /* consistent inner padding */
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Tablet 1024px ane niche */
+@media (max-width: 768px) {
+  .ad-wrapper {
+    flex-direction: column; /* Left + Right stack thay */
+  }
+
+  .ad-left,
+  .ad-right {
+    width: 100%; /* full width */
+  }
+
+  .ad-right {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Mobile 600px ane niche */
+@media (max-width: 600px) {
+  .ad {
+    padding: 40px 15px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr; /* images ek niche ek */
+  }
+
+  .content-title h2 {
+    font-size: 20px;
+  }
+
+  .content-price {
+    font-size: 18px;
+  }
+
+  .content-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tag,
+  .category {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .content-box,
+  .content-ad {
+    padding: 15px;
+  }
+}
+
+/* ad section end */
+/* adicon start */
 .ad-container {
   background-color: #ffffff;
   padding: 80px 0px;
 }
+@media (max-width: 1024px) {
+  .ad-container {
+    padding: 60px 20px;
+  }
+
+  .ad-container .slick-slide {
+    padding: 0 10px; /* icon vachche space */
+  }
+
+  .ad-container img {
+    max-width: 120px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-container {
+    padding: 40px 15px;
+  }
+
+  .ad-container .slick-slide {
+    padding: 0 8px;
+  }
+
+  .ad-container img {
+    max-width: 90px;
+    margin: auto;
+  }
+}
+
+/* adicon end */
 .test {
   padding: 80px 30px;
   background-image: url("./img/mask-patten-style.png");
@@ -702,31 +1519,179 @@
 .shop {
   padding: 80px 0px;
 }
+
 .shop-top {
   text-align: center;
 }
+
+.shop-top .title h2 {
+  font-size: 42px;
+}
+
+.shop-top .para p {
+  font-size: 16px;
+  line-height: 26px;
+}
+@media (max-width: 480px) {
+  .shop {
+    padding: 40px 15px;
+  }
+
+  .shop-top .subtitle span {
+    font-size: 13px;
+  }
+
+  .shop-top .title h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .shop-top .para p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .shop-top br {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .shop {
+    padding: 60px 20px;
+  }
+
+  .shop-top .subtitle span {
+    font-size: 14px;
+  }
+
+  .shop-top .title h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .shop-top .para p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
 .shop-bottom {
   margin-top: 50px;
 }
+/* ===== Common ===== */
+/* footer start */
 .footer {
-  padding: 30px;
-  margin: 0px 100px;
+  width: 100%;
+  padding: 40px 60px;
 }
-.footer-left {
-  margin-bottom: 50px;
+
+.footer-top,
+.footer-bottom,
+.footer-last {
+  width: 100%;
 }
-.head {
-  font-size: 25px;
+
+.footer-left img {
+  max-width: 100%;
 }
-.about1 {
-  padding: 30px 0px;
-}
+
 .p {
-  padding: 18px 0px;
+  font-size: 15px;
+  line-height: 1.6;
 }
-.footer-bottom {
-  padding-bottom: 50px;
+
+.head,
+.about1 {
+  font-size: 18px;
+  margin-bottom: 12px;
 }
+
+.payment-icon img {
+  max-width: 100%;
+}
+
+.mid {
+  text-align: center;
+}
+
+.last {
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* textarea */
+textarea {
+  max-width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* ===== Tablet (max 900px) ===== */
+@media (max-width: 900px) {
+  .footer {
+    padding: 30px 30px;
+  }
+
+  .mid {
+    text-align: center;
+  }
+
+  .last {
+    justify-content: center;
+  }
+}
+
+/* ===== Mobile (max 600px) ===== */
+@media (max-width: 600px) {
+  .footer {
+    padding: 20px;
+  }
+
+  /* Footer top */
+  .footer-left .MuiGrid-container {
+    flex-direction: column;
+  }
+
+  /* Footer bottom (About / Help / Info) */
+  .footer-bottom .MuiGrid-container {
+    flex-direction: column;
+  }
+
+  /* Footer last */
+  .footer-last .MuiGrid-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .payment-icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mid {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .last {
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .p {
+    font-size: 14px;
+  }
+
+  .head,
+  .about1 {
+    font-size: 16px;
+  }
+
+  textarea {
+    width: 100% !important;
+  }
+}
+/* footer end */
 .payment-icon,
 .mid,
 .last {
@@ -858,7 +1823,6 @@
 .gallery {
   text-align: center;
   padding: 80px 0px;
- 
 }
 .gallery h1 {
   font-size: 40px;
@@ -879,57 +1843,54 @@
   background-color: #faf2e1;
   padding: 80px 30px;
 }
-.set p{
+.set p {
   font-size: 16px;
 }
-.set h1{
+.set h1 {
   font-size: 40px;
 }
-.set span{
+.set span {
   font-size: 14px;
 }
-.set-video video{
+.set-video video {
   width: 100%;
-  
 }
-.set-video{
+.set-video {
   padding-top: 50px;
 }
-.product-detail h5 a{
+.product-detail h5 a {
   color: black;
 }
-.product-detail h5 a:hover{
-  color:  rgb(248, 155, 68);
+.product-detail h5 a:hover {
+  color: rgb(248, 155, 68);
 }
-.history{
+.history {
   padding: 80px 30px;
 }
-.h-left{
+.h-left {
   padding-left: 30px;
 }
-.h-left h4{
+.h-left h4 {
   font-size: 16px;
   padding-top: 20px;
 }
-.h-left h1{
+.h-left h1 {
   font-size: 40px;
-  
 }
-.h-left img{
+.h-left img {
   width: 100%;
   padding-top: 40px;
 }
-.h-right{
+.h-right {
   padding-left: 10px;
-  padding-right:30px ;
+  padding-right: 30px;
 }
-.h-right img{
+.h-right img {
   width: 100%;
 }
-.right-img img{
+.right-img img {
   width: 100%;
 }
-.right-img{
+.right-img {
   padding: 24px 0px;
 }
-
