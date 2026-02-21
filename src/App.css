@@ -77,7 +77,7 @@
   .text,
   .text1 {
     right: 2%;
-    left: 2%;
+    left: 5%;
     text-align: center;
     max-width: 96%;
     width: 96%;
@@ -251,13 +251,16 @@
 /* info start */
 .info {
   width: 100%;
-  padding: 70px 30px 70px 30px;
+  padding: 70px 30px;
+  box-sizing: border-box;
 }
 
+/* CONTENT ITEM */
 .content-item {
   text-align: center;
   padding: 15px;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .content-icon {
@@ -269,7 +272,7 @@
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 20px;
-  padding: 15px 0px;
+  padding: 15px 0;
   display: inline-block;
 }
 
@@ -316,103 +319,55 @@
   transform: scaleX(1);
 }
 
-/* RESPONSIVE ADJUSTMENTS FOR BETTER SPACING */
+/* ----------------- RESPONSIVE GRID ----------------- */
 
-/* Mobile (576px and below) - 1 column */
-@media (max-width: 576px) {
-  .info {
-    padding: 40px 15px;
-  }
-
-  .content-item {
-    padding: 25px 10px;
-    margin-bottom: 20px;
-  }
-
-  .content-icon .MuiSvgIcon-root {
-    font-size: 55px !important;
-  }
-
-  .content-title a {
-    font-size: 17px;
-    padding: 8px 0px;
-  }
-
-  .content-description p {
-    font-size: 14px;
-    margin: 10px 0;
-  }
-}
-
-/* Tablet (576px to 799px) - 2 columns */
-@media (min-width: 577px) and (max-width: 799px) {
-  .info {
-    padding: 50px 20px;
-  }
-
-  .content-item {
-    padding: 20px 15px;
-  }
-
-  .content-icon .MuiSvgIcon-root {
-    font-size: 60px !important;
-  }
-
-  .content-title a {
-    font-size: 18px;
-  }
-
-  .content-description p {
-    font-size: 15px;
-  }
-}
-
-/* Desktop (800px and above) - 4 columns */
+/* Desktop: 4 columns (>= 800px) */
 @media (min-width: 800px) {
-  .info {
-    padding: 70px 30px;
+  .MuiGrid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
   }
-
-  .content-icon .MuiSvgIcon-root {
-    font-size: 70px !important;
-  }
-
-  .content-title a {
-    font-size: 20px;
-  }
-
-  .content-description p {
-    font-size: 16px;
+  .MuiGrid-item {
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 }
 
-/* Large Desktop (1200px and above) */
-@media (min-width: 1200px) {
-  .info {
-    padding: 100px 50px;
+/* Tablet: 2 columns (425px - 799px) */
+@media (min-width: 425px) and (max-width: 799px) {
+  .MuiGrid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
   }
-
-  .content-icon .MuiSvgIcon-root {
-    font-size: 80px !important;
-  }
-
-  .content-title a {
-    font-size: 22px;
-  }
-
-  .content-description p {
-    font-size: 18px;
+  .MuiGrid-item {
+    flex: 0 0 48%;
+    max-width: 48%;
   }
 }
 
-/* Small Mobile (0px - 375px) */
-@media (max-width: 375px) {
+/* Mobile: 1 column (<= 424px) */
+@media (max-width: 424px) {
+  .MuiGrid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .MuiGrid-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Smaller padding & font size for very small screens */
   .info {
-    padding: 30px 10px;
+    padding: 40px 10px;
   }
 
   .content-item {
-    padding: 20px 5px;
+    padding: 15px 10px;
   }
 
   .content-icon .MuiSvgIcon-root {
@@ -421,12 +376,20 @@
 
   .content-title a {
     font-size: 16px;
+    padding: 8px 0;
   }
 
   .content-description p {
     font-size: 13px;
+    margin: 10px 0;
   }
 }
+
+
+
+
+
+
 
 /* info end */
 .product-card {
@@ -499,18 +462,20 @@
   font-weight: bold;
 }
 
+/* elementor section start */
+
 .elementor {
   background-image: url("./img/mask-patten-style.png");
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   background-color: #fff8e9;
-  padding: 50px 30px;
+  width: 100%;
+  padding: 50px 40px;
 }
 
 .elementor-container {
-  padding: 20px 10px 10px 10px;
+  padding: 20px 10px;
 }
 
 .elementor-subtitle span {
@@ -526,7 +491,7 @@
 .elementor-title h1 {
   font-size: 36px;
   line-height: 1.2;
-  margin: 5px 0 15px 0;
+  margin: 5px 0 15px;
   color: #333;
 }
 
@@ -534,90 +499,63 @@
   font-size: 16px;
   line-height: 1.6;
   color: #555;
-  margin-bottom: 20px;
-}
-
-.elementor-section {
-  margin: 20px 0;
-}
-
-.container-bottom {
-  padding: 10px 0;
+  margin-bottom: 25px;
 }
 
 .elementor-wrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .elementor-box {
   display: flex;
   align-items: center;
-  padding: 8px 0;
-  min-height: auto;
 }
 
 .elementor-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 50px;
   height: 50px;
   background: #fff;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
-}
-
-.elementor-icon .MuiSvgIcon-root {
-  font-size: 30px !important;
-  color: #333;
 }
 
 .elementor-box h4 {
-  font-size: 16px;
-  padding-left: 15px;
-  color: #333;
   margin: 0;
+  padding-left: 15px;
+  font-size: 16px;
   font-weight: 500;
 }
 
 .elementor-bottom {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 25px;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .elementor-btn button {
-  position: relative;
   padding: 12px 30px;
-  color: black;
-  background-color: #ecdec1;
+  background: #ecdec1;
   border: none;
-  cursor: pointer;
-  overflow: hidden;
-  transition: color 0.4s ease;
-  z-index: 1;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  min-width: 150px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .elementor-btn button::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  inset: 0;
   width: 0;
-  background-color: black;
-  transition: width 0.4s ease;
+  background: #000;
+  transition: 0.4s;
   z-index: -1;
 }
 
@@ -626,7 +564,7 @@
 }
 
 .elementor-btn button:hover {
-  color: white;
+  color: #fff;
 }
 
 .elementor-info {
@@ -635,329 +573,67 @@
   gap: 10px;
 }
 
-.elementor-info h5 {
-  font-size: 13px;
-  color: #666;
-  margin: 0 0 3px 0;
-}
-
-.elementor-info p {
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
-  margin: 0;
-}
-
-.elementor-info .MuiSvgIcon-root {
-  color: #333;
-  font-size: 35px !important;
-}
-
-/* RESPONSIVE MEDIA QUERIES */
-
-/* Large Desktops (1400px and above) */
-@media (min-width: 1400px) {
-  .elementor {
-    padding: 60px 80px;
-  }
-
-  .elementor-title h1 {
-    font-size: 42px;
-    margin: 8px 0 18px 0;
-  }
-
-  .elementor-wrapper {
-    font-size: 17px;
-    max-width: 90%;
-    margin-bottom: 25px;
-  }
-
-  .elementor-box h4 {
-    font-size: 17px;
-  }
-
-  .elementor-btn button {
-    padding: 14px 35px;
-    font-size: 15px;
-  }
-
-  .elementor-icon {
-    width: 55px;
-    height: 55px;
-  }
-
-  .elementor-icon .MuiSvgIcon-root {
-    font-size: 35px !important;
-  }
-}
-
-/* Medium Desktops/Laptops (1200px - 1399px) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .elementor {
-    padding: 50px 60px;
-  }
-
-  .elementor-title h1 {
-    font-size: 36px;
-    margin: 6px 0 16px 0;
-  }
-}
-
-/* Desktops (992px - 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .elementor {
-    padding: 40px 40px;
-  }
-
-  .elementor-title h1 {
-    font-size: 32px;
-    margin: 5px 0 15px 0;
-  }
-
-  .elementor-wrapper {
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-}
-
-/* Tablets (768px - 991px) - 2 columns (ડાબે ઇમેજ, જમણે content) */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 1024px) {
   .elementor {
     padding: 40px 25px;
   }
 
+  .elementor-title h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
   .elementor-container {
-    padding: 15px 0 5px 0;
+    padding: 10px 5px;
+  }
+
+  .elementor-subtitle span {
+    font-size: 12px;
+    margin-bottom: 3px;
+    letter-spacing: 1.5px;
   }
 
   .elementor-title h1 {
-    font-size: 28px;
-    margin: 5px 0 12px 0;
+    font-size: 26px;
+    margin: 4px 0 10px;
+    line-height: 1.25;
   }
 
   .elementor-wrapper {
     font-size: 14px;
-    margin-bottom: 15px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .elementor-wrap {
+    gap: 8px;
   }
 
   .elementor-box {
-    padding: 6px 0;
-  }
-
-  .elementor-box h4 {
-    font-size: 15px;
-    padding-left: 12px;
+    padding: 4px 0;
   }
 
   .elementor-icon {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
   }
 
-  .elementor-icon .MuiSvgIcon-root {
-    font-size: 25px !important;
+  .elementor-box h4 {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+
+  /* bottom area */
+  .elementor-bottom {
+    gap: 18px;
+    margin-top: 20px;
   }
 
   .elementor-btn button {
     padding: 10px 22px;
     font-size: 13px;
     min-width: 130px;
-  }
-
-  .elementor-info h5 {
-    font-size: 12px;
-  }
-
-  .elementor-info p {
-    font-size: 15px;
-  }
-
-  .elementor-info .MuiSvgIcon-root {
-    font-size: 30px !important;
-  }
-}
-
-/* 764px થી નીચે: Vertical layout (ઉપર ઇમેજ, નીચે content) */
-@media (max-width: 767px) {
-  .elementor {
-    padding: 35px 20px;
-  }
-
-  /* Vertical layout */
-  .elementor .MuiGrid-container {
-    flex-direction: column;
-  }
-
-  .elementor .MuiGrid-item {
-    width: 100% !important;
-    flex-basis: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .elementor .MuiGrid-item:first-child {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .elementor .MuiGrid-item img {
-    width: 70% !important;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .elementor-container {
-    padding: 0;
-    text-align: center;
-  }
-
-  .elementor-title h1 {
-    font-size: 26px;
-    text-align: center;
-    margin: 5px 0 15px 0;
-  }
-
-  .elementor-wrapper {
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .elementor-subtitle {
-    text-align: center;
-  }
-
-  .elementor-subtitle span {
-    margin-bottom: 3px;
-  }
-
-  /* 4 boxes - 2 per row */
-  .container-bottom .MuiGrid-container {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .container-bottom .MuiGrid-item {
-    flex-basis: 50% !important;
-    max-width: 50% !important;
-  }
-
-  .elementor-wrap {
-    align-items: center;
-    gap: 15px;
-  }
-
-  .elementor-box {
-    justify-content: center;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .elementor-box h4 {
-    padding-left: 12px;
-    font-size: 15px;
-  }
-
-  .elementor-icon {
-    width: 45px;
-    height: 45px;
-  }
-
-  .elementor-icon .MuiSvgIcon-root {
-    font-size: 25px !important;
-  }
-
-  .elementor-bottom {
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 25px;
-  }
-
-  .elementor-info {
-    padding-left: 0;
-    justify-content: center;
-  }
-}
-
-/* MOBILE ONLY: 575px થી નીચે - સંપૂર્ણ vertical stack */
-@media (max-width: 575px) {
-  .elementor {
-    padding: 30px 15px;
-  }
-
-  .elementor .MuiGrid-item:first-child {
-    margin-bottom: 25px;
-  }
-
-  .elementor .MuiGrid-item img {
-    width: 80% !important;
-    max-width: 300px;
-  }
-
-  .elementor-title h1 {
-    font-size: 22px;
-  }
-
-  .elementor-wrapper {
-    font-size: 14px;
-  }
-
-  .elementor-subtitle span {
-    font-size: 12px;
-  }
-
-  /* 4 boxes - 1 per row (vertical stack) */
-  .container-bottom .MuiGrid-container {
-    flex-direction: column;
-  }
-
-  .container-bottom .MuiGrid-item {
-    flex-basis: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .elementor-wrap {
-    align-items: center;
-    gap: 10px;
-  }
-
-  .elementor-box {
-    justify-content: center;
-    padding: 8px 0;
-    width: 100%;
-  }
-
-  .elementor-box h4 {
-    font-size: 14px;
-  }
-
-  .elementor-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .elementor-icon .MuiSvgIcon-root {
-    font-size: 22px !important;
-  }
-
-  .elementor-bottom {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-  }
-
-  .elementor-info {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-  }
-
-  .elementor-btn button {
-    padding: 10px 25px;
-    font-size: 13px;
-    width: 100%;
-    max-width: 220px;
-    min-width: auto;
   }
 
   .elementor-info h5 {
@@ -969,28 +645,51 @@
   }
 
   .elementor-info .MuiSvgIcon-root {
-    font-size: 28px !important;
+    font-size: 30px !important;
   }
 }
 
-/* Small Mobile (0px - 375px) */
-@media (max-width: 375px) {
-  .elementor {
-    padding: 20px 10px;
+@media (max-width: 600px) and (min-width: 426px) {
+  .elementor-subtitle span {
+    font-size: 11px;
+    letter-spacing: 1.2px;
   }
 
   .elementor-title h1 {
-    font-size: 20px;
+    font-size: 23px;
+    line-height: 1.25;
+    margin: 3px 0 8px;
+  }
+
+  .elementor-wrapper {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 15px;
   }
 
   .elementor-box h4 {
     font-size: 13px;
+    padding-left: 8px;
+  }
+
+  .elementor-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .elementor-icon .MuiSvgIcon-root {
+    font-size: 22px !important;
+  }
+
+  .elementor-bottom {
+    gap: 14px;
+    margin-top: 18px;
   }
 
   .elementor-btn button {
-    padding: 8px 20px;
     font-size: 12px;
-    max-width: 200px;
+    padding: 9px 20px;
+    min-width: 120px;
   }
 
   .elementor-info p {
@@ -998,33 +697,242 @@
   }
 }
 
-/* For extremely wide screens (1800px+) */
-@media (min-width: 1800px) {
+@media (max-width: 425px) {
   .elementor {
-    padding: 70px 120px;
-    max-width: 1600px;
+    padding: 30px 15px;
+  }
+
+  /* STACK LAYOUT */
+  .elementor .MuiGrid-container {
+    flex-direction: column;
+  }
+
+  .elementor .MuiGrid-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+
+  /* IMAGE */
+  .elementor .MuiGrid-item:first-child {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .elementor img {
+    width: 80% !important;
+    max-width: 280px;
     margin: 0 auto;
   }
 
+  /* TEXT */
+  .elementor-container {
+    text-align: center;
+    padding: 0;
+  }
+
   .elementor-title h1 {
-    font-size: 44px;
-    margin: 10px 0 20px 0;
+    font-size: 22px;
   }
 
   .elementor-wrapper {
-    font-size: 18px;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  /* FEATURES – SINGLE SINGLE */
+  .container-bottom .MuiGrid-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container-bottom .MuiGrid-item {
+    max-width: 100% !important;
+  }
+
+  .elementor-box {
+    justify-content: center;
+  }
+
+  /* BOTTOM CTA */
+  .elementor-bottom {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .elementor-btn button {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .elementor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .elementor {
+    padding: 25px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .elementor .MuiGrid-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .elementor .MuiGrid-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+
+  .elementor img {
+    display: block;
+    margin: 0 auto 25px;
     max-width: 80%;
   }
 
+  .elementor-container {
+    padding: 0;
+    text-align: center;
+  }
+
+  .elementor-subtitle span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .elementor-title h1 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 4px 0 10px;
+  }
+
+  .elementor-wrapper {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 18px;
+  }
+
+  .container-bottom .MuiGrid-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .elementor-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .elementor-box {
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: 8px 0;
+  }
+
   .elementor-icon {
-    width: 60px;
-    height: 60px;
+    width: 38px;
+    height: 38px;
   }
 
   .elementor-icon .MuiSvgIcon-root {
-    font-size: 38px !important;
+    font-size: 22px !important;
+  }
+
+  .elementor-box h4 {
+    padding-left: 0;
+    font-size: 13px;
+  }
+
+  .elementor-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .elementor-btn button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 12px;
+    padding: 9px 18px;
+    margin: 0 auto;
+  }
+
+  .elementor-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .elementor-info h5 {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .elementor-info p {
+    font-size: 13px;
+  }
+
+  .elementor-info .MuiSvgIcon-root {
+    font-size: 26px !important;
+    margin: 0 auto;
   }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .elementor-wrapper {
+    font-size: 14px;
+  }
+  .elementor-container {
+    padding: 0px 0 5px 0;
+  }
+  .elementor-title h1 {
+    font-size: 26px;
+    margin: 5px 0 10px 0;
+  }
+  .elementor-box {
+    padding: 0px 0;
+  }
+  .container-bottom {
+    padding: 0px 0;
+  }
+  .elementor-bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+  }
+  .elementor-subtitle span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .elementor-box h4 {
+    margin: 0;
+    padding-left: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+/* elementor section end */
+/* sale section start */
 .product-top {
   text-align: center;
 
@@ -1055,7 +963,7 @@
 .image-list-wrap {
   display: flex;
 }
-/* sale section start */
+
 .product-card {
   text-align: center;
   padding: 10px;
@@ -1190,9 +1098,66 @@
   .product-price span {
     font-size: 14px;
   }
+  .product-img {
+    height: 200px; /* tame already rakheli chhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff; /* optional – empty space clean lage */
+  }
+
+  .product-img img {
+    object-fit: contain; /* IMPORTANT */
+    width: 100%;
+    height: 100%;
+    position: relative; /* absolute remove */
+  }
+  .product-img .hover-img {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .product-top h5 {
+    font-size: 14px;
+  }
+  .product-top h2 {
+    font-size: 30px;
+  }
 }
 
 /* sale section end */
+/* slider section start */
+.slider-container {
+  background-color: #ecdec1;
+  padding: 10px 0px;
+  overflow: hidden;
+}
+
+.slider-container h4 {
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0 15px;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .slider-container h4 {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .slider-container h4 {
+    font-size: 13px;
+  }
+}
+/* slider section end */
 /* ad section start */
 .ad {
   padding: 80px 30px;
@@ -1354,12 +1319,11 @@
   .content-bottom {
     flex-direction: row;
     gap: 15px;
-   
   }
   .content-bottom {
     margin-top: 5px;
     padding: 8px 0px;
-}
+  }
 
   .tag,
   .category {

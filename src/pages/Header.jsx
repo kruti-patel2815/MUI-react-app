@@ -103,6 +103,22 @@ const Header = (props) => {
     autoplaySpeed: 2000,
     cssEase: "linear",
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   const adicon = {
     dots: false,
@@ -761,7 +777,45 @@ const Header = (props) => {
 
             <div className="elementor-bottom">
               <div className="elementor-btn">
-                <button>SHOP LILAC</button>
+                <Button
+                  className="btn"
+                  sx={{
+                    position: "relative",
+                    padding: {
+                      xs: "10px 20px",
+                      sm: "12px 24px",
+                      md: "15px 30px",
+                    },
+                    color: "black",
+                    backgroundColor: "#ecdec1",
+                    border: "none",
+                    cursor: "pointer",
+                    overflow: "hidden",
+                    transition: "color 0.4s ease",
+                    zIndex: 1,
+                    fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                    minWidth: { xs: "120px", sm: "140px", md: "160px" },
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      height: "100%",
+                      width: 0,
+                      backgroundColor: "black",
+                      transition: "width 0.4s ease",
+                      zIndex: -1,
+                    },
+                    "&:hover": {
+                      color: "white",
+                      "&::before": {
+                        width: "100%",
+                      },
+                    },
+                  }}
+                >
+                  SHOP LILAC
+                </Button>
               </div>
               <div className="elementor-info">
                 <MapsUgcOutlinedIcon
@@ -836,22 +890,22 @@ const Header = (props) => {
       <div className="slide-container">
         <Slider {...slick}>
           <div>
-            <h3>40% Off On Booking</h3>
+            <h4>40% Off On Booking</h4>
           </div>
           <div>
-            <h3>40% Off On Booking</h3>
+            <h4>40% Off On Booking</h4>
           </div>
           <div>
-            <h3>40% Off On Booking</h3>
+            <h4>40% Off On Booking</h4>
           </div>
           <div>
-            <h3>40% Off On Booking</h3>
+            <h4>40% Off On Booking</h4>
           </div>
           <div>
-            <h3>40% Off On Booking</h3>
+            <h4>40% Off On Booking</h4>
           </div>
           <div>
-            <h3>40% Off On Booking</h3>
+            <h4>40% Off On Booking</h4>
           </div>
         </Slider>
       </div>
